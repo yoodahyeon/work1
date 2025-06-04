@@ -146,10 +146,10 @@ setTimeout(() => {
     observer: true,
     observeParents: true,
   });
-  
+
   // slide stop/play
   setupSliderControls('.main-slider .swiper', mainSlider);
-}, 100)
+}, 500)
 
 
 // 핍업 열기
@@ -329,7 +329,7 @@ setTimeout(() => {
   // slide stop/play
   setupSliderControls('.notification-wrap', notificationSlider);
 
-}, 100);
+}, 500);
 
 // 알림창 팝업 오픈
 $('.notification-wrap .button-popup-open').on('click', function () {

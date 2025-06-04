@@ -2324,6 +2324,7 @@
   .main-news-area .news-tab-list .tab-cont { left: 18px; }
   .main-news-area .tab-cont .slider-control-wrap { right: 40px; }
 
+  /* 주요 서비스 */
   .main-service .inner {
     flex-direction: column;
     flex-wrap: wrap;
@@ -2363,7 +2364,7 @@
     margin: 0 29px 30px 0;
     flex-shrink: 0;
   }
-  .main-service .service-list .list-item:nth-child(8) { margin-right: 25px; }
+  .main-service .service-list .list-item:nth-child(8) { margin-right: 29px; }
   .main-service .service-list .link-item:before { margin-top: 0; }
   .main-service .service-list .list-item.item-more {
     right: 0;
@@ -3007,6 +3008,7 @@
    }
    .main-service .service-list { justify-content: center; }
    .main-service .service-list .list-item { margin: 0 10px 15px; }
+   .main-service .service-list .list-item:nth-child(8) { margin-right: 10px; }
    .main-service .service-list .link-item .service-txt { font-size: 15px; }
    .main-service .service-list .list-item.item-more {
     right: auto;
