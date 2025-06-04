@@ -1,0 +1,3339 @@
+@charset "UTF-8";
+
+[class^=main-] .inner {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  max-width: 1440px;
+  padding: 0 24px;
+  margin: 0 auto;
+}
+
+/* 메인 팝업 */
+[class^=main-popup] {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  padding: 20px 0;
+  background: rgba(0,0,0,0.4);
+  z-index: 99999;
+}
+[class^=main-popup].on {
+  display: flex;
+}
+[class^=main-popup] .contents-area {
+  position: relative;
+  background: #fff;
+  width: calc(100% - 34px);
+  max-width: 1200px;
+  height: 100%;
+  max-height: 800px;
+  border-radius: 20px;
+  overflow: hidden;
+}
+[class^=main-popup] .tit-wrap {
+  border-bottom: 1px solid #eaeaee;
+}
+[class^=main-popup] .tit-wrap strong {
+  display: block;
+  width: 260px;
+  background: #cb1838;
+  color: #fff;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 70px;
+  text-align: center;
+}
+[class^=main-popup] .contents-wrap {
+  height: calc(100% - 70px);
+  padding: 40px 38px 70px;
+  overflow: auto;
+}
+[class^=main-popup] .contents-wrap strong {
+  display: block;
+  margin-bottom: 15px;
+  color: #444;
+  font-size: 20px;
+  font-weight: 600;
+}
+[class^=main-popup] .contents-wrap strong em {
+  color: #cb1838;
+  font-size: 26px;
+  font-weight: 700;
+}
+[class^=main-popup] .contents {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 23px 0;
+  margin-left: -23px;
+}
+[class^=main-popup] .contents .link-item {
+  width: calc(100% / 3 - 23px);
+  margin-left: 23px;
+  border-radius: 10px 20px 10px 10px;
+  overflow: hidden;
+}
+[class^=main-popup] .contents.grid-4 .link-item {
+  width: calc(100% / 4 - 23px);
+}
+[class^=main-popup] .contents .link-item img {
+  transition: all 0.3s linear;
+}
+[class^=main-popup] .contents .link-item:hover img {
+  transform: scale(1.1);
+}
+[class^=main-popup] .contents-area .btn-close {
+  display: block;
+  position: absolute;
+  right: 25px;
+  top: 19px;
+  width: 32px;
+  height: 32px;
+  text-indent: -9999px;
+}
+[class^=main-popup] .contents-area .btn-close:before,
+[class^=main-popup] .contents-area .btn-close:after {
+  content:'';
+  position: absolute;
+  left: 50%;
+  top: calc(50% - 13px);
+  width: 3px;
+  height: 26px;
+  background: #505050;
+  transform: translateX(-50%) rotate(45deg);
+}
+[class^=main-popup] .contents-area .btn-close:after {
+  transform: translateX(-50%) rotate(-45deg);
+}
+
+/* 검색 영역 */
+.main-search-area {
+  padding: 40px 0;
+}
+.main-search-area .dream-family {
+  position: absolute;
+  left: 24px;
+  top: 0;
+}
+
+.main-search-area .search-wrap {
+  position: relative;
+  width: 595px;
+  margin: 0 auto 11px;
+}
+.main-search-area .search-wrap #search {
+  width: 100%;
+  height: 50px;
+  padding: 0 53px 0 10px;
+  background: #fff;
+  border: 3px solid #de142a;
+  border-radius: 50px;
+  outline: none;
+}
+.main-search-area .search-wrap .btn-search {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 48px;
+  height: 48px;
+  background: #de142a url(/asset/images/ico_srh.png) no-repeat 50% 50%;
+  border-radius: 50%;
+  text-indent: -9999px;
+}
+
+.main-search-area .keyword-wrap {
+  display: flex;
+  justify-content: center;
+  gap: 0 30px;
+}
+.main-search-area .keyword-wrap .keyword-tit {
+  position: relative;
+  padding-left: 15px;
+  color: #40444e;
+  font-size: 16px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+.main-search-area .keyword-wrap .keyword-tit:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 11px;
+  width: 11px;
+  height: 11px;
+  margin-top: -6px;
+  background: url(/asset/images/ico_fav.png) no-repeat;
+}
+.main-search-area .keyword-wrap .keyword-list {
+  display: flex;
+  gap: 0 30px;
+}
+.main-search-area .keyword-wrap .keyword-list a {
+  display: block;
+  color: #666;
+  font-size: 14px;
+  font-weight: 500;
+}
+.main-search-area .keyword-wrap .keyword-list a:hover {
+  text-decoration: underline;
+}
+
+/* 메인 슬라이드 */
+.main-news-area .inner {
+  justify-content: flex-start;
+}
+
+.main-news-area .mayor-news-area {
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+}
+.main-news-area .main-slider {
+  width: 596px;
+  border-radius: 15px 30px 15px 15px;
+  box-shadow: 0 7px 15px 8px rgba(0,0,0,0.1);
+  overflow: hidden;
+}
+.main-news-area .main-slider .swiper-slide img {
+  width: 100%;
+  height: 100%;
+}
+.main-news-area .main-slider .swiper-navigation {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  height: 50px;
+  padding: 0 30px 0 20px;
+  background: rgba(255,255,255,0.8);
+  border-radius: 15px 0 15px 0;
+  z-index: 10;
+}
+
+.main-news-area .mayor-news-area .mayor-wrap {
+  display: flex;
+  position: relative;
+  width: 100%;
+  margin-left: 80px;
+  padding-bottom: 34px;
+  z-index: 0;
+  flex: 1;
+}
+.main-news-area .mayor-news-area .mayor-wrap:before {
+  content: '';
+  position: absolute;
+  left: 24%;
+  bottom: -45px;
+  width: 194px;
+  height: 194px;
+  background: url(/asset/images/bg_mayor_b.png) no-repeat;
+  animation: rotate 20s linear infinite reverse;
+  z-index: -1;
+}
+.main-news-area .mayor-news-area .mayor-wrap:after {
+  content: '';
+  position: absolute;
+  left: 57%;
+  top: 0;
+  width: 63px;
+  height: 67px;
+  background: url(/asset/images/bg_mayor_s.png) no-repeat;
+  animation:  rotate 15s linear infinite;
+  z-index: -1;
+}
+
+@keyframes rotate {
+  100% {transform: rotate(360deg)}
+}
+
+.main-news-area .mayor-info .mayor-txt {
+  margin-right: 75px;
+  padding: 25px 0 10px;
+}
+.main-news-area .mayor-info .mayor-txt p {
+  margin-bottom: 10px;
+  font-size: 20px;
+  line-height: 1rem;
+}
+.main-news-area .mayor-info .mayor-txt strong {
+  color: #222;
+  font-size: 32px;
+  font-weight: 500;
+}
+.main-news-area .mayor-info .mayor-txt strong em {
+  font-family: 'TTTtangsbudaejjigaeB';
+  font-weight: 900;
+}
+
+.main-news-area .mayor-link {
+  align-self: flex-end;
+  z-index: 10;
+}
+.main-news-area .mayor-link a {
+  display: block;
+  position: relative;
+  width: 185px;
+  height: 40px;
+  padding: 8px 30px 8px 15px;
+  background: #fff;
+  border: 1px solid #eaeaee;
+  border-radius: 25px;
+  box-shadow: 3px 5px 8px 0 rgba(0,0,0,0.1);
+  font-size: 16px;
+  font-weight: 500;
+  transition: all 0.1s;
+}
+.main-news-area .mayor-link a:after {
+  content: '';
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  width: 9px;
+  height: 9px;
+  margin-top: -5px;
+  background: url(/asset/images/bul_arr_01.png) no-repeat;
+  transition: all 0.2s;
+}
+.main-news-area .mayor-link a + a {
+  margin-top: 8px;
+}
+.main-news-area .mayor-link a:hover,
+.main-news-area .mayor-link a:focus {
+  color: #cd1529;
+  border-color: #cd1529;
+}
+.main-news-area .mayor-link a:hover:after,
+.main-news-area .mayor-link a:focus:after {
+  background-image: url(/asset/images/bul_arr_07.png);
+}
+
+.main-news-area .mayor-img {
+  position: absolute;
+  right: 26px;
+  bottom: 0;
+  width: 221px;
+  height: 237px;
+}
+
+.main-news-area .news-wrap {
+  position: absolute;
+  left: 700px;
+  bottom: 0;
+  width: calc(100vw - (675px + (100vw - 1400px)));
+  height: 280px;
+  padding: 30px 0;
+  background: #f3f4f5;
+  z-index: 0;
+}
+.main-news-area .news-wrap:before {
+  content: '';
+  position: absolute;
+  left: -90px;
+  top: 0;
+  width: calc(100vw - (565px + ((100vw - 1400px) / 2)));
+  height: 100%;
+  background: #f3f4f5;
+  z-index: -1;
+}
+.main-news-area .news-wrap .news-tab-list {
+  display: flex;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+.main-news-area .news-tab-list .tab-tit {
+  position: relative;
+  padding-bottom: 7px;
+  color: #444;
+  font-size: 18px;
+  cursor: pointer;
+}
+.main-news-area .news-tab-list li.is-on .tab-tit {
+  color: #cd1529;
+  font-weight: 700;
+}
+.main-news-area .news-tab-list li.is-on .tab-tit:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background: #cd1529;
+}
+.main-news-area .news-tab-list .list-item { flex-shrink: 0; }
+.main-news-area .news-tab-list .list-item + .list-item .tab-tit {
+  margin-left: 30px;
+}
+.main-news-area .news-tab-list .list-item + .list-item .tab-tit:before {
+  content: '';
+  position: absolute;
+  left: -17px;
+  top: 8px;
+  width: 3px;
+  height: 3px;
+  background: #ceced1;
+}
+
+.main-news-area .news-tab-list .tab-cont {
+  display: none;
+  position: absolute;
+  left: -10px;
+  bottom: 30px;
+  width: 100%;
+}
+.main-news-area .news-tab-list .list-item.is-on .tab-cont {
+  display: block;
+}
+.main-news-area .news-tab-list .tab-cont .swiper {
+  padding: 10px;
+}
+.main-news-area .tab-cont .link-item {
+  display: block;
+  height: 165px;
+  background: #fff;
+  border: 1px solid #e6e8e9;
+  border-radius: 25px;
+  box-shadow: 1px 3px 15px 0 rgba(0,0,0,0.1);
+  overflow: hidden;
+  transition: all 0.2s;
+}
+.main-news-area .tab-cont .link-item:hover,
+.main-news-area .tab-cont .link-item:focus,
+.main-news-area .tab-cont .link-item:hover .tit:before,
+.main-news-area .tab-cont .link-item:focus .tit:before {
+  border-color: #ed7b87;
+}
+
+.main-news-area .tab-cont .link-item .tit {
+  display: block;
+  position: relative;
+  padding: 25px;
+  color: #222;
+  font-size: 18px;
+  font-weight: 600;
+}
+.main-news-area .tab-cont .link-item .tit:after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -10px;
+  width: 20px;
+  height: 20px;
+  margin-left: -10px;
+  background: url(/asset/images/ico_news_off.png) no-repeat;
+  transition: all 0.2s;
+}
+.main-news-area .tab-cont .link-item .tit:before {
+  content: '';
+  position: absolute;
+  left: -1px;
+  top: -1px;
+  width: calc(100% + 1px);
+  height: 100%;
+  border-radius: 25px 25px 35px 35px;
+  border: 1px solid #e6e8e9;
+}
+.main-news-area .tab-cont .link-item:hover .tit:after,
+.main-news-area .tab-cont .link-item:focus .tit:after {
+  background-image: url(/asset/images/ico_news_on.png);
+  transform: rotate(90deg);
+}
+
+.main-news-area .tab-cont .link-item .ico-new {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin-left: 3px;
+  background: url(/asset/images/ico_new.png) no-repeat;
+  text-indent: -9999px;
+  vertical-align: middle;
+}
+.main-news-area .tab-cont .link-item .date {
+  position: relative;
+  margin-left: 28px;
+  margin-top: 20px;
+  padding-left: 20px;
+  color: #767676;
+  font-size: 14px;
+}
+.main-news-area .tab-cont .link-item .date:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 4px;
+  width: 16px;
+  height: 16px;
+  background: url(/asset/images/ico_date.png) no-repeat;
+}
+.main-news-area .tab-cont .slider-control-wrap {
+  position: absolute;
+  right: 10px;
+  top: -40px;
+}
+.main-news-area .tab-cont .slider-control-wrap .btn-more {
+  margin-left: 10px;
+}
+
+/* 대전시 주요서비스 */
+.main-service {
+  padding: 50px 0;
+}
+.main-service .sc-title {
+  width: 210px;
+  padding-top: 20px;
+}
+.main-service .sc-title em {
+  font-weight: 400;
+}
+.main-service .service-list-wrap {
+  /* width: calc(100% - 210px); */
+  flex: 1;
+  margin-top: -20px;
+}
+.main-service .service-list {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  max-height: 160px;
+  margin-left: -52px;
+  overflow: hidden;
+  text-align: center;
+  transition: all 0.3s;
+}
+.main-service .service-list.on {
+  max-height: 100%;
+}
+.main-service .service-list .list-item {
+  width: 85px;
+  margin-left: 52px;
+}
+.main-service .service-list .list-item:nth-child(8) {
+  margin-right: 137px;
+}
+
+.main-service .service-list .link-item {
+  display: block;
+}
+.main-service .service-list .link-item:before {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 80px;
+  margin: 20px auto 15px;
+  background-color: #fff;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  border: 1px solid #eaeaee;
+  box-shadow: 1px 7px 14px 0 rgba(0,0,0,0.1);
+  border-radius: 15px;
+  transition: all 0.2s;
+}
+.main-service .service-list .list-item .link-item:hover:before,
+.main-service .service-list .list-item .link-item:focus:before {
+  background-color: #d5152a;
+}
+
+/* 주요서비스 아이콘 */
+.main-service .service-list .item-civil .link-item:before {
+  background-image: url(/asset/images/ico_service_01.png);
+}
+.main-service .service-list .item-civil .link-item:hover:before,
+.main-service .service-list .item-civil .link-item:focus:before {
+  background-image: url(/asset/images/ico_service_01_w.png);
+}
+.main-service .service-list .item-civil-comp .link-item:before {
+  background-image: url(/asset/images/ico_service_02.png);
+}
+.main-service .service-list .item-civil-comp .link-item:hover:before,
+.main-service .service-list .item-civil-comp .link-item:focus:before {
+  background-image: url(/asset/images/ico_service_02_w.png);
+}
+.main-service .service-list .item-call .link-item:before {
+  background-image: url(/asset/images/ico_service_18.png);
+}
+.main-service .service-list .item-call .link-item:hover:before,
+.main-service .service-list .item-call .link-item:focus:before {
+  background-image: url(/asset/images/ico_service_18_w.png);
+}
+.main-service .service-list .item-reserv .link-item:before {
+  background-image: url(/asset/images/ico_service_04.png);
+}
+.main-service .service-list .item-reserv .link-item:hover:before,
+.main-service .service-list .item-reserv .link-item:focus:before {
+  background-image: url(/asset/images/ico_service_04_w.png);
+}
+.main-service .service-list .item-animal .link-item:before {
+  background-image: url(/asset/images/ico_service_05.png);
+}
+.main-service .service-list .item-animal .link-item:hover:before,
+.main-service .service-list .item-animal .link-item:focus:before {
+  background-image: url(/asset/images/ico_service_05_w.png);
+}
+.main-service .service-list .item-businesse-info .link-item:before {
+  background-image: url(/asset/images/ico_service_07.png);
+}
+.main-service .service-list .item-businesse-info .link-item:hover:before,
+.main-service .service-list .item-businesse-info .link-item:focus:before {
+  background-image: url(/asset/images/ico_service_07_w.png);
+}
+.main-service .service-list .item-statistics .link-item:before {
+  background-image: url(/asset/images/ico_service_16.png);
+}
+.main-service .service-list .item-statistics .link-item:hover:before,
+.main-service .service-list .item-statistics .link-item:focus:before {
+  background-image: url(/asset/images/ico_service_16_w.png);
+}
+.main-service .service-list .item-tram .link-item:before {
+  background-image: url(/asset/images/ico_service_19.png);
+}
+.main-service .service-list .item-tram .link-item:hover:before,
+.main-service .service-list .item-tram .link-item:focus:before {
+  background-image: url(/asset/images/ico_service_19_w.png);
+}
+.main-service .service-list .item-city-housing .link-item:before {
+  background-image: url(/asset/images/ico_service_09.png);
+}
+.main-service .service-list .item-city-housing .link-item:hover:before,
+.main-service .service-list .item-city-housing .link-item:focus:before {
+  background-image: url(/asset/images/ico_service_09_w.png);
+}
+.main-service .service-list .item-health .link-item:before {
+  background-image: url(/asset/images/ico_service_10.png);
+}
+.main-service .service-list .item-health .link-item:hover:before,
+.main-service .service-list .item-health .link-item:focus:before {
+  background-image: url(/asset/images/ico_service_10_w.png);
+}
+.main-service .service-list .item-seesaw .link-item:before {
+  background-image: url(/asset/images/ico_service_11.png);
+}
+.main-service .service-list .item-seesaw .link-item:hover:before,
+.main-service .service-list .item-seesaw .link-item:focus:before {
+  background-image: url(/asset/images/ico_service_11_w.png);
+}
+.main-service .service-list .item-budget .link-item:before {
+  background-image: url(/asset/images/ico_service_12.png);
+}
+.main-service .service-list .item-budget .link-item:hover:before,
+.main-service .service-list .item-budget .link-item:focus:before {
+  background-image: url(/asset/images/ico_service_12_w.png);
+}
+.main-service .service-list .item-compliment .link-item:before {
+  background-image: url(/asset/images/ico_service_13.png);
+}
+.main-service .service-list .item-compliment .link-item:hover:before,
+.main-service .service-list .item-compliment .link-item:focus:before {
+  background-image: url(/asset/images/ico_service_13_w.png);
+}
+.main-service .service-list .item-audit .link-item:before {
+  background-image: url(/asset/images/ico_service_14.png);
+}
+.main-service .service-list .item-audit .link-item:hover:before,
+.main-service .service-list .item-audit .link-item:focus:before {
+  background-image: url(/asset/images/ico_service_14_w.png);
+}
+.main-service .service-list .item-survey .link-item:before {
+  background-image: url(/asset/images/ico_service_15.png);
+}
+.main-service .service-list .item-survey .link-item:hover:before,
+.main-service .service-list .item-survey .link-item:focus:before {
+  background-image: url(/asset/images/ico_service_15_w.png);
+}
+.main-service .service-list .item-youth-portal .link-item:before {
+  background-image: url(/asset/images/ico_service_06.png);
+}
+.main-service .service-list .item-youth-portal .link-item:hover:before,
+.main-service .service-list .item-youth-portal .link-item:focus:before {
+  background-image: url(/asset/images/ico_service_06_w.png);
+}
+.main-service .service-list .item-cleaning .link-item:before {
+  background-image: url(/asset/images/ico_service_17.png);
+}
+.main-service .service-list .item-cleaning .link-item:hover:before,
+.main-service .service-list .item-cleaning .link-item:focus:before {
+  background-image: url(/asset/images/ico_service_17_w.png);
+}
+
+.main-service .service-list .item-more {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.main-service .service-list .item-more .link-item:before {
+  background-color: #31343d;
+  background-image: url(/asset/images/bul_more_w.png);
+}
+.main-service .service-list .item-more.on .link-item:before {
+  background-color: #31343d;
+  background-image: url(/asset/images/bul_close_w.png);
+}
+.main-service .service-list .link-item .service-txt {
+  color: #444;
+  font-size: 17px;
+  font-weight: 500;
+  letter-spacing: -1.1px;
+  white-space: nowrap;
+}
+
+.g-bg {background: linear-gradient(0deg, rgb(255, 255, 255) 0%, rgb(245, 246, 246) 100%);}
+
+/* story 대전 */
+.main-story-feed {
+  padding: 40px 0 80px;
+}
+.main-story-feed .inner {
+  justify-content: space-between;
+}
+
+.main-story-feed .img-wrap img {
+  transition: transform 0.3s linear;
+}
+.main-story-feed a[class*=item]:hover .img-wrap img {
+  transform: scale(1.1);
+}
+
+.main-story-feed .story-area {
+  position: relative;
+  width: calc(50% - 25px);
+}
+.main-story-feed .sc-title {
+  margin-bottom: 24px;
+}
+.main-story-feed .story-area .sc-title em {
+  color: #df1128;
+}
+
+.main-story-feed .story-area .story-wrap {
+  display: flex;
+  gap: 0 28px;
+}
+.main-story-feed .story-wrap .story-item {
+  width: 50%;
+  padding-bottom: 20px;
+  overflow: hidden;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0px 7px 15px 8px rgba(0,0,0,.1);
+}
+.main-story-feed .story-wrap .img-area {
+  position: relative;
+}
+.main-story-feed .story-wrap .img-wrap {
+  height: 210px;
+  overflow: hidden;
+}
+.main-story-feed .story-wrap .img-wrap img {
+  width: 100%;
+  height: 100%;
+}
+.main-story-feed .story-wrap .img-area [class^=tag-] {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  padding: 5px 12px;
+  background: #fff;
+  border-radius: 25px;
+  font-size: 15px;
+  font-weight: 500;
+  border: 1px solid;
+}
+.main-story-feed .story-wrap .img-area .tag-env {
+  border-color: #1a7c31;
+  color: #1a7c31;
+}
+.main-story-feed .story-wrap .img-area .tag-admin {
+  border-color: #31323d;
+  color: #31323d;
+}
+.main-story-feed .story-item .story-tit {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  height: 68px;
+  padding: 20px 30px 0;
+  color: #000;
+  font-size: 18px;
+  font-weight: 600;
+}
+.main-story-feed .btn-more {
+  position: absolute;
+  right: 0;
+  top: 7px;
+}
+
+/* 인터넷방송 */
+.main-story-feed .broadcast-wrap {
+  width: calc(25% - 25px);
+}
+.main-story-feed .broadcast-wrap .broadcast-item {
+  display: block;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 4px 4px 14px 0px rgba(0,0,0,.2);
+  overflow: hidden;
+}
+.main-story-feed .broadcast-wrap .img-wrap {
+  height: 183px;
+  overflow: hidden;
+}
+.main-story-feed .broadcast-wrap .img-wrap img {
+  width: 100%;
+  height: 100%;
+}
+.main-story-feed .broadcast-wrap .contents {
+ padding: 20px;
+ text-align: center; 
+}
+.main-story-feed .broadcast-wrap .contents .icon-pick {
+  display: inline-block;
+  position: relative;
+  margin: 0 auto 14px;
+  padding: 6px 13px 6px 36px;
+  background: #fff;
+  border: 1px solid #f5658a;
+  border-radius: 20px;
+  color: #E13B6B;
+  font-size: 16px;
+  font-weight: 600;
+}
+.main-story-feed .broadcast-wrap .contents .icon-pick:before {
+  content: '';
+  position: absolute;
+  left: 6px;
+  top: 50%;
+  margin-top: -11px;
+  width: 22px;
+  height: 22px;
+  background: #f13163 url(/asset/images/djtv_ic.png) no-repeat 9px 50%;
+  border-radius: 50%;
+}
+.main-story-feed .broadcast-wrap .contents strong {
+  display: block;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  color: #000;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/* 알림창 */
+.main-story-feed .notification-wrap {
+  position: relative;
+  width: calc(25% - 25px);
+}
+.main-story-feed .notification-wrap .title-wrap {
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 24px;
+}
+.main-story-feed .notification-wrap .title-wrap .sc-title {
+  margin-bottom: 0;
+  margin-right: 10px;
+}
+.main-story-feed .notification-wrap .slider-wrap {
+  box-shadow: 4px 4px 14px 0px rgba(0,0,0,.2);
+  border-radius: 20px;
+  overflow: hidden;
+}
+.main-story-feed .notification-wrap .swiper-slide { height: 298px; }
+.main-story-feed .notification-wrap .link-item {
+  display: block;
+  height: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+}
+.main-story-feed .notification-wrap .link-item img { 
+  width: 100%;
+  height: 100%;
+ }
+.main-story-feed .notification-wrap .swiper-pagination {
+  position: static;
+  width: auto;
+  color: #767676;
+  font-size: 15px;
+}
+.main-story-feed .notification-wrap .swiper-pagination * {
+  letter-spacing: 2px;
+}
+.main-story-feed .notification-wrap .swiper-pagination-current {
+  color: #df1128;
+  font-weight: 500;
+}
+.main-story-feed .notification-wrap .slider-control-wrap {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 32px;
+  padding: 0 13px;
+  background: #fff;
+  border-radius: 25px;
+}
+.main-story-feed .notification-wrap .slider-control-wrap .swiper-button-next {
+  margin-right: 21px;
+}
+
+.main-popup-notification .contents-area {
+  padding-bottom: 70px;
+}
+.main-popup-notification .contents-wrap {
+  padding-bottom: 0;
+}
+.main-popup-notification .contents .link-item {
+  height: 216px;
+}
+.main-popup-notification .contents .link-item img {
+  width: 100%;
+  height: 100%;
+}
+
+/* 분야별 서비스 */
+.main-service-field {
+  padding-bottom: 60px;
+}
+.main-service-field .inner {
+  display: block;
+}
+.main-service-field .sc-title {
+  position: relative;
+  margin-bottom: 24px;
+}
+.main-service-field .sc-title:after {
+  content: '';
+  position: absolute;
+  right: 60px;
+  bottom: -24px;
+  width: 219px;
+  height: 96px;
+  background: url(/asset/images/field_dream.png) no-repeat 50% / 100%;
+}
+
+.main-service-field .field-tab-wrap {
+  display: flex;
+  position: relative;
+  padding: 0 40px;
+  background: #fff;
+  border: 1px solid #eaeaee;
+  border-radius: 20px 20px 0 0;
+}
+.main-service-field .field-tab-wrap:before {
+  content: '';
+  position: absolute;
+  left: 40px;
+  top: 0;
+  width: 24px;
+  height: calc(100% - 3px);
+  background: linear-gradient(270deg, rgba(0,0,0,0) 0%, rgba(255,255,255,1) 100%);
+  z-index: 100;
+}
+.main-service-field .field-tab-wrap:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  background: #fff;
+  box-shadow: 0 6px 15px 2px rgba(0,0,0,0.1);
+}
+
+.main-service-field .field-tab-list {
+  display: flex;
+  overflow: hidden;
+}
+.main-service-field .field-tab-list li {
+  flex-shrink: 0;
+}
+.main-service-field .field-tab-list a {
+  display: block;
+  position: relative;
+  padding: 0 28px;
+  line-height: 58px;
+  color: #444;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.main-service-field .field-tab-list a:hover,
+.main-service-field .field-tab-list li.active a {
+  color: #cd1529;
+}
+.main-service-field .field-tab-list li.active a:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 3px;
+  background: #e5142b;
+}
+
+.main-service-field .field-tab-wrap .control-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 64px;
+}
+.main-service-field .field-tab-wrap .control-wrap [class^=btn-] {
+  position: relative;
+  width: 9px;
+  height: 12px;
+  background: url(/asset/images/bul_nav_01.png) no-repeat;
+  text-indent: -9999px;
+}
+.main-service-field .field-tab-wrap .control-wrap .btn-next {
+  margin-left: 21px;
+  background-position: 100% 0;
+}
+.main-service-field .field-tab-wrap .control-wrap .btn-next:before {
+  content: '';
+  position: absolute;
+  left: -11px;
+  top: 0px;
+  width: 1px;
+  height: 12px;
+  background: #e9e9e9;
+}
+
+/* 분야별 서비스 컨텐츠 공통 */
+.main-service-field .field-contents-area {
+  height: 340px;
+  background: #fef3f1;
+  border: 1px solid #f3d6d6;
+  border-top: none;
+  border-radius: 0 0 20px 20px;
+  overflow: hidden;
+}
+.main-service-field [class^="cont-wrap"] {
+  display: none;
+  height: 100%;
+  padding: 37px 40px;
+  gap: 0 32px;
+}
+.main-service-field [class^="cont-wrap"].active {
+  display: flex;
+}
+
+.main-service-field .left-wrap {
+  display: flex;
+  gap: 0 32px;
+  flex: 1;
+}
+.main-service-field .list-wrap {
+  padding: 23px 25px;
+  background: #fff;
+  border-radius: 0.6rem;
+}
+.main-service-field .list-wrap [class^=tit-] {
+  display: block;
+  position: relative;
+  width: max-content;
+  padding: 0 9px 6px 34px;
+  margin-bottom: 12px;
+  color: #222;
+  font-size: 20px;
+  font-weight: 600;
+  z-index: 0;
+}
+.main-service-field .list-wrap [class^=tit-]:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: -3px;
+  width: 29px;
+  height: 28px;
+  background-repeat: no-repeat;
+  background-position: 50%;
+}
+.main-service-field .list-wrap [class^=tit-]:after {
+  content: '';
+  position: absolute;
+  left: -5px;
+  bottom: 0;
+  width: 100%;
+  height: 14px;
+  background: #fef4f2;
+  border-radius: 25px;
+  z-index: -1;
+}
+.main-service-field .list-wrap .list li {
+  border-bottom: 1px dotted #c7c7c7;
+}
+.main-service-field .list-wrap .list li:last-child {
+  border: none;
+}
+.main-service-field .list-wrap .list li a {
+  display: block;
+  position: relative;
+  padding: 10px 0;
+  color: #666;
+  font-size: 16px;
+  transition: all 0.2s;
+}
+.main-service-field .list-wrap .list li a:after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 10px;
+  height: 9px;
+  background: url(/asset/images/bul_arr_03.png);
+}
+.main-service-field .list-wrap .list li .new-tab:after {
+  height: 10px;
+  background: url(/asset/images/bur_outlink_02.png);
+}
+.main-service-field .list-wrap .list li a:hover {
+  color: #b83e52;
+  font-weight: 500;
+}
+.main-service-field .list-wrap .list li a:hover:after {
+  background-image: url(/asset/images/bul_arr_11.png);
+}
+.main-service-field .list-wrap .list li .new-tab:hover:after {
+  background: url(/asset/images/bur_outlink_01.png);
+}
+
+/* 리스트 좌우정렬 */
+.main-service-field .list-wrap .list.grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.main-service-field .list.grid li {
+  width: calc(50% - 15px);
+}
+.main-service-field .list.grid li:nth-last-child(2) {
+  border-color: none;
+}
+
+/* 리스트 아이콘 */
+.main-service-field .list.icon {
+  display: flex;
+  justify-content: space-around;
+}
+.main-service-field .list.icon li {
+  border: none;
+}
+.main-service-field .list.icon li a {
+  text-align: center;
+}
+.main-service-field .list.icon li a:after {
+  display: none;
+}
+.main-service-field .list.icon .icon-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 100px;
+  height: 100px;
+  margin: 0 auto 22px;
+  background: #f8f8f8;
+  border-radius: 50%;
+  overflow: hidden;
+  z-index: 0;
+}
+.main-service-field .list.icon .icon-wrap:before {
+  content: '';
+  position: absolute;
+  left: -100%;
+  top: -100%;
+  width: 100%;
+  height: 100%;
+  background: #f9edef;
+  transform: rotate(45deg);
+  transition: transform 0.3s linear;
+  z-index: -1;
+}
+.main-service-field .list.icon .icon-wrap:hover:before {
+  transform: scale(4);
+}
+.main-service-field .list.icon li a strong {
+  color: #666;
+  font-size: 16px;
+  font-weight: 400;
+}
+.main-service-field .list.icon li a:hover strong {
+  color: #b83e52;
+  font-weight: 500;
+}
+
+.main-service-field .link-item-wrap {
+  display: flex;
+}
+.main-service-field .link-item-wrap [class^="link-item"] {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  background: #fff;
+  border: 1px solid;
+  border-radius: 0.6rem;
+  font-weight: 600;
+  transition: all 0.1s;
+}
+.main-service-field .link-item-wrap .link-item {
+  padding: 0 35px;
+}
+.main-service-field .link-item-wrap .link-item:hover {
+  transform: translateY(-5px);
+}
+
+/* 링크 배너 타입 */
+.main-service-field .link-item-wrap .link-item-banner {
+  align-items: flex-start;
+  padding-top: 33px;
+  background-position: 50% 100%;
+  background-repeat: no-repeat;
+}
+.main-service-field .link-item-wrap .link-item-banner i {
+  display: block;
+  position: relative;
+  padding-bottom: 45px;
+  color: #000;
+  font-size: 18px;
+  font-weight: 500;
+}
+.main-service-field .link-item-wrap .link-item-banner i:after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: 32px;
+  height: 32px;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  border-radius: 50%;
+}
+
+/*  분야별 서비스 - 만남 */
+.main-service-field .cont-wrap-family .cont01 {
+  width: 190px;
+}
+.main-service-field .cont-wrap-family .cont02 {
+  width: 100%;
+  flex: 1;
+}
+.main-service-field .list a.l-style01 {
+  letter-spacing: -2px;
+}
+.main-service-field .cont-wrap-family .link-item-wrap {
+  width: 170px;
+  flex-direction: column;
+  gap: 10px 0;
+}
+.main-service-field .cont-wrap-family .link-item {
+  padding: 0 10px;
+}
+.main-service-field .item-news {
+  padding: 0 10px;
+}
+.main-service-field .item-news strong {
+  position: relative;
+  width: 100%;
+  padding-left: 50px;
+  line-height: 18px;
+}
+.main-service-field .item-news strong:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 38px;
+  height: 38px;
+  background: url(/asset/images/icon_1101.png) no-repeat;
+}
+
+/* 분야별 서비스 - 교육 */
+.main-service-field .cont-wrap-edu .list-wrap {
+  width: 50%;
+}
+.main-service-field .cont-wrap-edu .link-item-wrap {
+  width: 550px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 18px 0;
+}
+.main-service-field .cont-wrap-edu .link-item {
+  height: auto;
+}
+.main-service-field .cont-wrap-edu .item01 {
+  width: calc(50% - 10px);
+}
+.main-service-field .cont-wrap-edu .item02 {
+  width: calc((100% / 3) - 8px);
+}
+
+.main-service-field .cont-wrap-edu .logo_mo {
+  display: none;
+}
+
+/* 분야별 서비스 - 복지 */
+.main-service-field .cont-wrap-welfare .cont01 {
+  flex: 1;
+}
+.main-service-field .cont-wrap-welfare .cont02 {
+  width: 255px;
+}
+.main-service-field .cont-wrap-welfare .link-item-wrap {
+  width: 515px;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.main-service-field .cont-wrap-welfare .t-wrap {
+  display: flex; 
+  justify-content: space-between;
+  gap: 0 17px;
+}
+.main-service-field .cont-wrap-welfare .item01 {
+  width: calc(100% - 216px);
+  height: auto;
+  padding: 25px 20px;
+}
+.main-service-field .cont-wrap-welfare .item01 strong {
+  display: block;
+  position: relative;
+  width: 100%;
+  color: #b93e53;
+  font-size: 18px;
+  padding-left: 60px;
+}
+.main-service-field .cont-wrap-welfare .item01 strong:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 47px;
+  height: 46px;
+  background: url(/asset/images/icon_0603.png) no-repeat 50%;
+}
+.main-service-field .cont-wrap-welfare .item01 strong:after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 32px;
+  height: 32px;
+  background: url(/asset/images/bul_arr_07.png) no-repeat 50%;
+  background-color: #f7ebed;
+  border-radius: 50%;
+}
+.main-service-field .cont-wrap-welfare .item02 {
+  flex: 1;
+}
+.main-service-field .cont-wrap-welfare .b-wrap {
+  display: flex;
+  gap: 0 18px;
+  height: calc(100% - 75px);
+  padding-top: 18px;
+}
+.main-service-field .cont-wrap-welfare .link-item-icon {
+  flex: 1;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 10px;
+  border-color: #eae9ee;
+  text-align: center;
+}
+.main-service-field .cont-wrap-welfare .link-item-icon:hover {
+  border-color: #b83e52;
+}
+.main-service-field .cont-wrap-welfare .link-item-icon .icon-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 100px;
+  height: 100px;
+  margin-bottom: 12px;
+  background-color: #f8f8f8;
+  border-radius: 50%;
+  overflow: hidden;
+  z-index: 0;
+}
+.main-service-field .cont-wrap-welfare .link-item-icon .icon-wrap:before {
+  content: '';
+  position: absolute;
+  left: -100%;
+  top: -100%;
+  width: 100%;
+  height: 100%;
+  background-color: #f9edef;
+  transform: rotate(45deg);
+  transition: transform 0.3s linear;
+  z-index: -1;
+}
+.main-service-field .cont-wrap-welfare .link-item-icon .icon-wrap:hover:before {
+  transform: scale(4);
+}
+.main-service-field .cont-wrap-welfare .link-item-icon strong {
+  display: flex;
+  align-items: center;
+  height: 38px;
+  color: #222;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 19px;
+}
+.main-service-field .cont-wrap-welfare .link-item-icon:hover strong {
+ color: #b83e52;
+}
+.main-service-field .cont-wrap-welfare .r-wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 20px 0;
+  width: 198px;
+}
+
+
+/* 분야별 서비스 - 예산 */
+.main-service-field .cont-wrap-finance .list-wrap {
+  flex: 1;
+}
+.main-service-field .cont-wrap-finance .link-item-wrap {
+  width: calc(41% - 32px);
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.main-service-field .cont-wrap-finance .link-item {
+  width: calc(50% - 10px);
+  height: auto;
+  padding: 0 35px;
+}
+.main-service-field .cont-wrap-finance .link-item strong {
+  position: relative;
+  width: 100%;
+  font-size: 18px;
+  font-weight: 600;
+}
+.main-service-field .cont-wrap-finance .link-item strong:after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 32px;
+  height: 32px;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  border-radius: 50%;
+}
+.main-service-field .cont-wrap-finance .item-finance {
+  background-color: #f1effb;
+}
+.main-service-field .item-finance strong:after {
+  background-color: #e3dffc;
+  background-image: url(/asset/images/bul_arr_05.png);
+}
+.main-service-field .cont-wrap-finance .item-tax {
+  background-color: #f2eaf4;
+}
+.main-service-field .cont-wrap-finance .item-tax strong {
+  color: #a32576;
+}
+.main-service-field .item-tax strong:after {
+  background-color: #ebdbed;
+  background-image: url(/asset/images/bul_arr_06.png);
+}
+.main-service-field .cont-wrap-finance .item-budget {
+  background-color: #ffe9eb;
+  border-color: #ffe9eb;
+}
+.main-service-field .item-budget strong:after {
+  background-color: #f7d9db;
+  background-image: url(/asset/images/bul_arr_07.png);
+}
+.main-service-field .cont-wrap-finance .item-contract {
+  background-color: #f0f4f5;
+}
+.main-service-field .item-contract strong:after {
+  background-color: #dae7ea;
+  background-image: url(/asset/images/bul_arr_10.png);
+}
+
+/* 분야별 서비스 - 도시 */
+.main-service-field .cont-wrap-city .list-wrap {
+  flex: 1;
+}
+.main-service-field .cont-wrap-city .link-item-wrap {
+  width: 220px;
+}
+.main-service-field .cont-wrap-city .link-item-banner {
+  width: 100%;
+  background-color: #f1faf5;
+  background-image: url(/asset/images/banner_01.png);
+}
+.main-service-field .cont-wrap-city .link-item-banner i:after {
+  background-color: #e3eeea;
+  background-image: url(/asset/images/bul_arr_10.png);
+}
+
+/* 분야별 서비스 - 재난 */
+.main-service-field .cont-wrap-safety .list-wrap {
+  flex: 1;
+}
+.main-service-field .cont-wrap-safety .link-item-wrap {
+  width: 340px;
+  flex-direction: column;
+  gap: 20px 0;
+}
+
+/* 분야별 서비스 - 교통 */
+.main-service-field .cont-wrap-transport .list-wrap {
+  flex: 1;
+}
+.main-service-field .cont-wrap-transport .link-item-wrap {
+  width: 340px;
+  flex-direction: column;
+  gap: 20px 0;
+}
+
+/* 분야별 서비스 - 환경 */
+.main-service-field .cont-wrap-env .list-wrap {
+  flex: 1;
+}
+.main-service-field .cont-wrap-env .link-item-wrap {
+  width: 445px;
+  gap: 0 18px;
+}
+.main-service-field .cont-wrap-env .l-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 20px 0;
+  flex: 1;
+}
+.main-service-field .cont-wrap-env .link-item-banner {
+  flex: 1;
+  background-color: #e5e8f7;
+  background-image: url(/asset/images/banner_05.png);
+  border-color: #c7bdef;
+  background-position: 100% 100%;
+}
+.main-service-field .cont-wrap-env .link-item-banner i:after {
+  background-color: #d4d6eb;
+  background-image: url(/asset/images/bul_arr_09.png);
+}
+
+/* 분야별 서비스 - 기업 */
+.main-service-field .cont-wrap-economy .cont01 {
+  width: 255px;
+}
+.main-service-field .cont-wrap-economy .cont02 {
+  flex: 1;
+}
+.main-service-field .cont-wrap-economy .link-item-wrap {
+  width: 430px;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.main-service-field .cont-wrap-economy .link-item {
+  width: calc(50% - 10px);
+  height: auto;
+  padding: 0 10px;
+  flex-direction: column;
+  gap: 10px 0;
+}
+.main-service-field .cont-wrap-economy .link-item strong {
+  color: #000;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+/* 분야별 서비스 - 문화 */
+.main-service-field .cont-wrap-culture .cont01 {
+  flex: 1;
+}
+.main-service-field .cont-wrap-culture .cont02 {
+  width: 255px;
+}
+.main-service-field .cont-wrap-culture .link-item-wrap {
+  width: 450px;
+  justify-content: space-between;
+  gap: 0 24px;
+}
+.main-service-field .cont-wrap-culture .link-item-banner {
+  flex: 1;
+}
+.main-service-field .cont-wrap-culture .item01 {
+  background-color: #e5e9f7;
+  background-image: url(/asset/images/banner_0801.png);
+  border-color: #c7bdef;
+}
+.main-service-field .cont-wrap-culture .item02 {
+  background-color: #ffeaea;
+  background-image: url(/asset/images/banner_0802.png);
+  border-color: #f1bcc5;
+}
+.main-service-field .cont-wrap-culture .item01 i:after {
+  background-color: #d4d6ec;
+  background-image: url(/asset/images/bul_arr_06.png);
+}
+.main-service-field .cont-wrap-culture .item02 i:after {
+  background-color: #f8d8db;
+  background-image: url(/asset/images/bul_arr_07.png);
+}
+
+/* 분야별 서비스 - 관광 */
+.main-service-field .cont-wrap-tour .list-wrap {
+  flex: 1;
+}
+.main-service-field .cont-wrap-tour .link-item-wrap {
+  width: 290px;
+  flex-direction: column;
+  gap: 20px 0;
+}
+.main-service-field .cont-wrap-tour .item01 {
+  padding: 0 10px 0 90px;
+  background: url(/asset/images/dajeontour_img.png) no-repeat 0 50% / cover;
+  border-color: #a3b7ed;
+}
+.main-service-field .cont-wrap-tour .item02 {
+  padding: 0 45px;
+  justify-content: flex-end;
+  background: #fff url(/asset/images/icon_0908.png) no-repeat 35px 100%;
+}
+.main-service-field .cont-wrap-tour .item02 span {
+  color: #6c2f74;
+  font-weight: 500;
+}
+
+/* 분야별 서비스 - 행정 */
+.main-service-field .cont-wrap-admin .list-wrap {
+  flex: 1;
+}
+.main-service-field .cont-wrap-admin .link-item-wrap {
+  width: 445px;
+  flex-wrap: wrap;
+  gap: 20px 0;
+}
+.main-service-field .cont-wrap-admin .link-item {
+  height: auto;
+}
+.main-service-field .cont-wrap-admin .link-item strong {
+  display: block;
+  position: relative;
+  width: 100%;
+  font-size: 18px;
+}
+.main-service-field .cont-wrap-admin .link-item strong:after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 32px;
+  height: 32px;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  border-radius: 50%;
+}
+.main-service-field .cont-wrap-admin .item01 {
+  width: 100%;
+  padding-left: 240px;
+  background: #fff url(/asset/images/mayor_greeting_img.png) no-repeat;
+  background-size: auto 100%;
+}
+.main-service-field .cont-wrap-admin .item01 strong:after {
+  background-color: #f7ebed;
+  background-image: url(/asset/images/bul_arr_07.png);
+}
+.main-service-field .cont-wrap-admin .b-wrap {
+  display: flex;
+  gap: 0 20px;
+  width: 100%;
+}
+.main-service-field .cont-wrap-admin .b-wrap .link-item {
+  flex: 1;
+}
+.main-service-field .cont-wrap-admin .item02 strong {
+  color: #476162;
+}
+.main-service-field .cont-wrap-admin .item02 strong:after {
+  background-color: #f0f4f5;
+  background-image: url(/asset/images/bul_arr_10.png);
+}
+.main-service-field .cont-wrap-admin .item03 strong {
+  color: #a32576;
+}
+.main-service-field .cont-wrap-admin .item03 strong:after {
+  background-color: #f0eaf1;
+  background-image: url(/asset/images/bul_arr_06.png);
+}
+
+/* 분야별 서비스 - 과학 */
+.main-service-field .cont-wrap-science .l-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  flex: 1;
+}
+.main-service-field .cont-wrap-science .link-item {
+  width: calc(50% - 10px);
+  height: auto;
+}
+.main-service-field .cont-wrap-science .link-item-banner {
+  width: 400px;
+  margin-left: 32px;
+  padding-top: 30px;
+  background-color: #ffe9eb;
+  background-image: url(/asset/images/banner_11.png);
+  background-position-x: 50%;
+  border-color: #f1bcc4;
+}
+.main-service-field .cont-wrap-science .link-item-banner i {
+  color: #000;
+  font-size: 22px;
+  font-weight: 500;
+}
+.main-service-field .cont-wrap-science .link-item-banner i:after {
+  background-color: #f7d9db;
+  background-image: url(/asset/images/bul_arr_07.png);
+}
+
+/* 분야별 서비스 리스트 타이틀 */
+.main-service-field .tit-wedding:before {
+  background-image: url(/asset/images/tit_17.png);
+}
+.main-service-field .tit-care:before {
+  background-image: url(/asset/images/tit_18.png);
+}
+.main-service-field .tit-dwelling:before {
+  background-image: url(/asset/images/tit_19.png);
+}
+.main-service-field .tit-edu:before {
+  background-image: url(/asset/images/tit_10.png);
+}
+.main-service-field .tit-youth:before {
+  background-image: url(/asset/images/tit_11.png);
+}
+.main-service-field .tit-welfare:before {
+  background-image: url(/asset/images/tit_06.png);
+}
+.main-service-field .tit-health:before {
+  background-image: url(/asset/images/tit_07.png);
+}
+.main-service-field .tit-finance:before {
+  background-image: url(/asset/images/tit_01.png);
+}
+.main-service-field .tit-tax:before {
+  background-image: url(/asset/images/tit_02.png);
+}
+.main-service-field .tit-city:before {
+  background-image: url(/asset/images/tit_16.png);
+}
+.main-service-field .tit-safety:before {
+  background-image: url(/asset/images/tit_03.png);
+}
+.main-service-field .tit-transport:before {
+  background-image: url(/asset/images/tit_04.png);
+}
+.main-service-field .tit-env:before {
+  background-image: url(/asset/images/tit_05.png);
+}
+.main-service-field .tit-enterprise:before {
+  background-image: url(/asset/images/tit_08.png);
+}
+.main-service-field .tit-economy:before {
+  background-image: url(/asset/images/tit_09.png);
+}
+.main-service-field .tit-culture:before {
+  background-image: url(/asset/images/tit_12.png);
+}
+.main-service-field .tit-gym:before {
+  background-image: url(/asset/images/tit_13.png);
+}
+.main-service-field .tit-tour:before {
+  background-image: url(/asset/images/tit_14.png);
+}
+.main-service-field .tit-admin:before {
+  background-image: url(/asset/images/tit_15.png);
+}
+
+
+/* 분야별 리스트 컬러 */
+.main-service-field .link-item-wrap .c-ver01 {
+  border-color: #cb7582;
+  color: #b83e52;
+}
+.main-service-field .link-item-wrap .c-ver02 {
+  border-color: #e39588;
+  color: #c43c25;
+}
+.main-service-field .link-item-wrap .c-ver03 {
+  border-color: #433c80;
+  color: #433c80;
+}
+.main-service-field .link-item-wrap .c-ver04 {
+  border-color: #7a3585;
+  color: #7a3585;
+}
+.main-service-field .link-item-wrap .c-ver05 {
+  border-color: #9ec6c8;
+}
+.main-service-field .link-item-wrap .c-ver06 {
+  border-color: #86b2a5;
+}
+.main-service-field .link-item-wrap .c-ver07 {
+  border-color: #b1abe7;
+}
+.main-service-field .link-item-wrap .c-ver08 {
+  border-color: #b491b9;
+  color: #a42677;
+}
+.main-service-field .link-item-wrap .c-ver09 {
+  border-color: #b1abe7;
+  color: #433c82;
+}
+.main-service-field .link-item-wrap .c-ver10 {
+  border-color: #b491b9;
+  color: #6e2d78;
+}
+.main-service-field .link-item-wrap .c-ver11 {
+  border-color: #9ec6c8;
+  color: #476162;
+}
+.main-service-field .link-item-wrap .c-ver12 {
+  border-color: #9fc5c8;
+}
+.main-service-field .link-item-wrap .c-ver13 {
+  border-color: #b1abe7;
+}
+.main-service-field .link-item-wrap .c-ver14 {
+  border-color: #a295da;
+}
+.main-service-field .link-item-wrap .c-ver15 {
+  border-color: #b491b9;
+}
+
+/* 대전시 소통 */
+.main-commu {
+  background-color: #f3f4f5;
+  background-image: url(/asset/images/bg.png);
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  border-bottom: 1px solid #eaeaee;
+}
+.main-commu .sc-title em {
+  color: #df1128;
+}
+.main-commu .sc-title span {
+  color: #666;
+  font-weight: 500;
+}
+
+.main-commu .commu-area {
+  min-width: 0;
+  padding-top: 50px;
+  margin-right: 50px;
+  flex: 1;
+}
+.main-commu .commu-area .top-wrap {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 64px;
+}
+.main-commu .commu-area .sns-wrap {
+  display: flex;
+  align-items: center;
+  gap: 0 10px;
+}
+.main-commu .sns-wrap [class^="item-"] {
+  border-radius: 50%;
+  transition: all 0.3s;
+}
+.main-commu .sns-wrap [class^="item-"]:hover,
+.main-commu .sns-wrap [class^="item-"]:focus {
+  transform: rotate(30deg);
+}
+
+.main-commu .commu-slider {
+  position: relative;
+  height: 375px;
+  margin-left: -20px;
+}
+.main-commu .commu-slider:after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100px;
+  height: 100%;
+  background: linear-gradient(90deg, rgba(251,251,251,0) 0%, rgba(243,244,245,1) 100%);
+  z-index: 100;
+}
+.main-commu .commu-slider .swiper {
+  height: 100%;
+  padding-left: 20px;
+}
+.main-commu .commu-slider .swiper-slide {
+  padding-top: 25px;
+}
+.main-commu .commu-slider .link-item {
+  display: block;
+  border-radius: 20px;
+  box-shadow: -2px 6px 9px 8px rgba(0,0,0,0.1);
+  overflow: hidden;
+}
+.main-commu .commu-slider .swiper-slide:nth-child(even) {
+  transform: translateY(50px);
+}
+
+.main-commu .commu-slider .img-wrap {
+  height: calc(100% - 95px);
+  max-height: 184px;
+  overflow: hidden;
+}
+.main-commu .commu-slider .img-wrap img {
+  width: 100%;
+  transition: all 0.3s linear;
+}
+.main-commu .commu-slider .link-item:hover .img-wrap img,
+.main-commu .commu-slider .link-item:focus .img-wrap img {
+  transform: scale(1.1);
+}
+.main-commu .commu-slider .bottom-wrap {
+  position: relative;
+  height: 95px;
+  padding: 25px 29px 0;
+  background: #fff;
+}
+.main-commu .commu-slider .bottom-wrap strong {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  color: #000;
+  font-size: 18px;
+  font-weight: 600;
+  word-break: keep-all;
+}
+.main-commu .commu-slider .bottom-wrap [class^="sns-"] {
+  position: absolute;
+  right: 0;
+  top: -19px;
+  width: 40px;
+  height: 38px;
+  border-radius: 25px 0 0 25px;
+  background-position: right 1px center;
+  text-indent: -9999px;
+}
+.main-commu .commu-slider .bottom-wrap .sns-youtube {
+  background-color: #dd2e37;
+  background-image: url(/asset/images/ico_youtube.png);
+}
+.main-commu .commu-slider .bottom-wrap .sns-band {
+  background-color: #68be5e;
+  background-image: url(/asset/images/ico_band.png);
+}
+.main-commu .commu-slider .bottom-wrap .sns-facebook {
+  background-color: #2570c6;
+  background-image: url(/asset/images/ico_facebook.png);
+}
+.main-commu .commu-slider .bottom-wrap .sns-blog {
+  background-color: #38b341;
+  background-image: url(/asset/images/ico_blog.png);
+}
+.main-commu .commu-slider .bottom-wrap .sns-twitter {
+  background-color: #000;
+  background-image: url(/asset/images/ico_twitter.png);
+}
+
+.main-commu .commu-slider .control-wrap [class^="swiper-button"] {
+  width: 50px;
+  height: 50px;
+  background-color: rgba(255,255,255,0.8);
+  background-repeat: no-repeat;
+  background-position: 50%;
+  border-radius: 50%;
+  z-index: 200;
+}
+.main-commu .commu-slider .control-wrap .swiper-button-prev {
+  left: -10px;
+  background-image: url(/asset/images/bul_prev.png);
+}
+.main-commu .commu-slider .control-wrap .swiper-button-next {
+  right: -25px;
+  background-image: url(/asset/images/bul_next.png);
+}
+.main-commu .commu-slider .control-wrap [class^="swiper-button"]:after {
+  display: none;
+}
+
+/* 월간일류도시 대전 */
+.main-commu .monthly-area {
+  width: 345px;
+  padding: 30px 0 65px;
+  background: #fff;
+}
+.main-commu .monthly-area .top-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 260px;
+  margin: 0 auto 14px;
+}
+.main-commu .monthly-area .top-wrap .tit {
+  color: #222;
+  font-size: 24px;
+  font-weight: 700;
+}
+.main-commu .monthly-area .top-wrap .tit em {
+  color: #df1128;
+}
+.main-commu .monthly-area .top-wrap .month {
+  width: 64px;
+  height: 64px;
+  line-height: 64px;
+  background: #cd1529;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  text-align: center;
+}
+.main-commu .monthly-area .img-wrap {
+  display: block;
+  width: 260px;
+  margin: 0 auto 20px;
+  border: 1px solid #eee;
+  border-radius: 5px;
+}
+.main-commu .monthly-area .menu-wrap {
+  display: flex;
+  justify-content: center;
+  gap: 0 12px;
+}
+.main-commu .monthly-area .menu-wrap a {
+  padding: 14px 32px;
+  background: #fff;
+  border: 1px solid #cd1529;
+  border-radius: 30px;
+  box-shadow: 1px 3px 8px rgba(0,0,0,0.1);
+  color: #cd1529;
+  font-size: 16px;
+  font-weight: 600;
+  transition: all 0.1s;
+}
+.main-commu .monthly-area .menu-wrap a:hover {
+  background: #cd1529;
+  color: #fff;
+}
+
+/* 배너 모음 */
+.main-banner-area {
+  padding: 30px 0;
+}
+.main-banner-area .inner {
+  align-items: center;
+}
+.main-banner-area .banner-collection-link {
+  padding-left: 20px;
+  margin-right: 32px;
+  color: #31323d;
+  font-size: 16px;
+  font-weight: 700;
+}
+.main-banner-area .banner-slider {
+  display: flex;
+  min-width: 0;
+  flex: 1;
+}
+.main-banner-area .banner-slider .slider-control-wrap {
+  margin-right: 40px;
+}
+.main-banner-area .banner-slider .swiper-slide a {
+  display: block;
+  border: 1px solid #e0e1e5;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: all 0.2s;
+}
+.main-banner-area .banner-slider .swiper-slide a:hover,
+.main-banner-area .banner-slider .swiper-lside a:focus {
+  border-color: #31343d;
+}
+
+/* 퀵메뉴 */
+.quick-menu {
+  position: fixed;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 64px;
+  z-index: 9999;
+}
+.quick-menu .quick-btn-search {
+  display: block;
+  width: 46px;
+  height: 46px;
+  margin: 0 auto 12px;
+  background-color: #df142a;
+  background-image: url(/asset/images/ico_srh.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 50%;
+  box-shadow: 3px 3px 5px 0px rgba(0,0,0,.2);
+  text-indent: -9999px;
+  transition: all 0.2s;
+}
+.quick-menu .quick-btn-search:hover {
+  background-color: #31343d;
+}
+.quick-menu .sns-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px 0;
+  width: 64px;
+  padding: 25px 0;
+  margin-bottom: 11px;
+  background: #fff;
+  border-radius: 30px 0 0 30px;
+  box-shadow: -3px 3px 6px rgba(0,0,0,.1);
+}
+.quick-menu .sns-list li a {
+  display: block;
+  transition: all 0.3s;
+}
+.quick-menu .sns-list li a:hover {
+  transform: rotate(35deg);
+}
+.quick-menu .btn-top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 46px;
+  height: 46px;
+  padding-top: 5px;
+  margin: 0 auto;
+  background: #3d3d3d;
+  border-radius: 50%;
+  box-shadow: 3px 3px 5px 0px rgba(0,0,0,.2);
+  color: #fff;
+  font-size: 10px;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+.quick-menu .btn-top:hover {
+  background-color: #df142a;
+}
+.quick-menu .btn-top:before {
+  content: '';
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-bottom: 3px solid #fff;
+}
+
+/* 반응형 */
+@media (max-width: 1550px) {
+  /* 메인 슬라이드 */
+  .main-news-area .mayor-info .mayor-txt { margin-right: 40px; }
+  .main-news-area .news-wrap { width: 45vw; }
+  .main-news-area .news-tab-list .tab-cont:after {
+    content: '';
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100px;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(251,251,251,0) 0%, rgba(243,244,245,1) 100%);
+    z-index: 100;
+  }
+
+  [class^=main-] .inner { padding: 0 60px 0 30px; }
+  .main-service .service-list { margin-left: -3.7%; }
+  .main-service .service-list .list-item { margin-left: 3.7%; }
+  .main-service .service-list .item-more { right: 25px; }
+
+}
+
+@media (max-width: 1455px) {
+  .main-service .service-list-wrap { margin-top: 0; }
+  .main-service .service-list {margin-left: 0; }
+  .main-service .service-list .list-item { 
+    width: calc((100% / 8) - 16px);
+    margin-left: 0;
+   }
+   .main-service .service-list .list-item:nth-child(8) { margin-right: 108px; }
+   .main-service .service-list .list-item.item-more { 
+    right: 25px;
+    width: 80px;
+   }
+
+   .main-commu .inner { padding-left: 45px; }
+   .main-commu .sc-title span { 
+    display: block;
+    margin-left: 0;
+   }
+}
+
+@media (max-width: 1400px) {
+  /* 메인 슬라이드 */
+  .main-news-area .main-slider { width: 500px; }
+  .main-news-area .main-slider .swiper-slide { height: 448px; }
+  .main-news-area .mayor-news-area .mayor-wrap { margin-left: 50px; }
+  .main-news-area .mayor-img {
+    width: 180px;
+    height: 193px;
+  }
+  .main-news-area .news-wrap {
+    left: 574px;
+    width: calc(100vw - 670px);
+  }
+  .main-news-area .news-wrap:before {
+    width: calc(100vw - (500px + ((100vw - 1400px) / 2)));
+  }
+
+  /* 분야별 서비스 */
+  .main-service-field [class^="cont-wrap"] { padding: 37px 30px; }
+  .main-service-field .list.grid li { width: calc(50% - 10px); }
+  .main-service-field .list-wrap .list li a { font-size: 15px; }
+
+  /* 분야별 서비스 - 복지 */
+  .main-service-field .cont-wrap-welfare .cont02 { width: 225px; }
+  .main-service-field .cont-wrap-welfare .link-item-wrap { width: 425px; }
+  .main-service-field .cont-wrap-welfare .item01 { width: calc(100% - 167px); }
+  .main-service-field .cont-wrap-welfare .item01 strong:after { display: none; }
+  .main-service-field .cont-wrap-welfare .item02 { padding: 25px 20px; }
+  .main-service-field .cont-wrap-welfare .item02 strong { letter-spacing: -1px; }
+  .main-service-field .cont-wrap-welfare .link-item-icon { justify-content: center; }
+   .main-service-field .cont-wrap-welfare .link-item-icon .icon-wrap {
+    width: 80px;
+    height: 80px;
+   }
+   .main-service-field .cont-wrap-welfare .r-wrap { width: 150px; }
+   .main-service-field .cont-wrap-welfare .r-wrap .link-item { padding: 0 10px; }
+
+  /* 분야별 서비스 - 기업 */
+  .main-service-field .cont-wrap-economy .link-item-wrap { width: 360px; }
+
+  /* 분야별 서비스 - 문화 */
+  .main-service-field .cont-wrap-culture .link-item-wrap { width: 380px; } 
+
+  /* 분야별 서비스 - 관광 */
+  .main-service-field .cont-wrap-tour .link-item-wrap { width: 220px; }
+  .main-service-field .cont-wrap-tour .item02 {
+    padding: 0 20px;
+    justify-content: flex-end;
+    background-size: 75px auto;
+    background-position: 20px 100%;
+  }
+
+  /* 분야별 서비스 - 행정 */
+  .main-service-field .cont-wrap-admin .item01 strong:after { display: none; }
+
+  /* 분야별 서비스 - 과학 */
+  .main-service-field .cont-wrap-science .link-item-banner { width: 220px; }
+}
+
+@media (max-width: 1280px) {
+  [class^=main-] .inner { padding: 0 28px; }
+
+  /* 메인 슬라이드 */
+  .main-news-area .news-wrap {
+    width: calc(100vw - 590px);
+  }
+
+  .main-service .service-list .list-item { width: calc((100% / 8) - 14px); }
+
+  .main-service .service-list .item-more { right: 15px; }
+
+  .main-story-feed { padding-bottom: 50px; }
+
+  .main-story-feed .story-wrap .img-wrap { height: 190px; }
+  .main-story-feed .broadcast-wrap,
+  .main-story-feed .notification-wrap { width: calc(25% - 15px); }
+  .main-story-feed .broadcast-wrap .img-wrap { height: 163px; }
+  .main-story-feed .notification-wrap .swiper-slide { height: 278px; }
+
+  /* 분야별 서비스 */
+  .main-service-field .sc-title:after {
+    right: 30px;
+    width: 160px;
+    height: 70px;
+  }
+
+  .quick-menu {
+    display: none;
+  }
+}
+
+@media (max-width: 1200px) {
+  .main-search-area { padding-top: 110px; }
+  .main-search-area .inner { flex-wrap: wrap; }
+  .main-search-area .dream-family {
+    position: relative;
+    left: 0;
+    margin-bottom: 25px;
+  }
+  .main-search-area .search-area { width: 100%; }
+
+  /* 메인 슬라이드 */
+  .main-news-area .inner { 
+    flex-wrap: wrap;
+    padding: 0;
+  }
+  .main-news-area .mayor-news-area { padding: 0 28px; }
+  .main-news-area .main-slider { 
+    position: relative;
+    width: 595px;
+    z-index: 10;
+   }
+  .main-news-area .mayor-news-area .mayor-wrap { 
+    height: 100%;
+    margin-left: 70px;
+    padding-top: 26px;
+    flex-direction: column;
+  }
+  .main-news-area .mayor-news-area .mayor-wrap:before { bottom: 10px; }
+  .main-news-area .mayor-news-area .mayor-wrap:after {
+    left: auto;
+    right: 20px;
+    top: 100px;
+  }
+  .main-news-area .mayor-info .mayor-txt { padding: 20px 0; }
+  .main-news-area .mayor-link { align-self: flex-start; }
+  .main-news-area .mayor-link a { font-size: 15px; }
+  .main-news-area .mayor-img {
+    width: 219px;
+    height: 235px;
+  }
+  .main-news-area .news-wrap {
+    position: relative;
+    left: 0;
+    width: 100%;
+    padding: 30px 20px 30px 28px;
+  }
+  .main-news-area .news-tab-list .tab-cont { left: 18px; }
+  .main-news-area .tab-cont .slider-control-wrap { right: 40px; }
+
+  .main-service .inner {
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 0 28px;
+  }
+  .main-service .sc-title {
+    width: auto;
+    padding: 0;
+    margin-bottom: 20px;
+  }
+  .main-service .sc-title br { display: none; }
+   .main-service .service-list-wrap {
+    position: relative;
+    width: 100%;
+   }
+   .main-service .service-list:after {
+    content: '';
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 80px;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(255,255,255,1) 100%);
+   }
+   .main-service .service-list.on:after {
+    display: none;
+   }
+   .main-service .service-list { 
+    flex-wrap: nowrap;
+    position: static;
+    max-height: none;
+   }
+   .main-service .service-list.on { flex-wrap: wrap; }
+  .main-service .service-list .list-item {
+    width: 90px;
+    margin: 0 29px 30px 0;
+    flex-shrink: 0;
+  }
+  .main-service .service-list .list-item:nth-child(8) { margin-right: 25px; }
+  .main-service .service-list .link-item:before { margin-top: 0; }
+  .main-service .service-list .list-item.item-more {
+    right: 0;
+    top: -50px;
+    width: 105px;
+    margin: 0;
+    padding: 8px 18px;
+    background: #31343d;
+    border-radius: 25px;
+  }
+  .main-service .service-list .list-item.item-more p {
+    position: relative;
+    padding-left: 20px;
+    color: #fff;
+    font-size: 14px;
+  }
+  .main-service .service-list .list-item.item-more p:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: calc(50% - 3px);
+    width: 13px;
+    height: 6px;
+    background: url(/asset/images/bul_arr_04.png);
+  }
+  .main-service .service-list.on .list-item.item-more p:before {
+    transform: rotate(-180deg);
+    top: calc(50% - 5px);
+  }
+  .main-service .service-list .item-more .link-item:before { display: none; }
+
+  /* 분야별 서비스 */
+  .main-service-field [class^="cont-wrap"] { 
+    padding: 25px;
+    gap: 0 20px;
+   }
+   .main-service-field .left-wrap { gap: 0 20px; }
+  .main-service-field .list-wrap { padding: 18px 20px; }
+  .main-service-field .list-wrap .list.grid { 
+    height: 210px;
+    padding: 0 10px 10px 0;
+    overflow-y: scroll;
+   }
+  .main-service-field .list.grid li { width: 100%; }
+
+  /* 분야별 서비스 - 만남 */
+  .main-service-field .cont-wrap-family .cont01 { width: 210px; }
+
+  /* 분야별 서비스 - 교육 */
+  .main-service-field .cont-wrap-edu .link-item-wrap { width: 480px; }
+  .main-service-field .cont-wrap-edu .link-item-wrap .link-item { padding: 0 14px; }
+  .main-service-field .cont-wrap-edu .item01 { height: calc(50% - 5px); }
+  .main-service-field .cont-wrap-edu .item02 { height: 130px; }
+
+  /* 분야별 서비스 - 복지 */
+  .main-service-field .cont-wrap-welfare .link-item-wrap { 
+    width: 300px;
+    justify-content: flex-start;
+    gap: 15px 0;
+   }
+  .main-service-field .cont-wrap-welfare .link-item-wrap .link-item { 
+    width: calc(50% - 10px);
+    padding: 10px 5px;
+   }
+  .main-service-field .cont-wrap-welfare .link-item-wrap .link-item strong { font-size: 16px; }
+  .main-service-field .cont-wrap-welfare .item01 strong { padding: 0; }
+  .main-service-field .cont-wrap-welfare .item01 strong:before,
+  .main-service-field .cont-wrap-welfare .item01 strong:after { display: none; }
+
+  .main-service-field .cont-wrap-welfare .b-wrap { 
+    flex-wrap: wrap; 
+    gap: 15px 17px;
+    padding: 0;
+   }
+  .main-service-field .cont-wrap-welfare .link-item-icon { height: auto; }
+  .main-service-field .cont-wrap-welfare .r-wrap {
+    flex-direction: row;
+    width: 100%;
+  }
+  .main-service-field .cont-wrap-welfare .r-wrap .link-item { height: 55px; }
+
+  /* 분야별 서비스 - 예산 */
+  .main-service-field .field-contents-area .cont-wrap-finance .link-item-wrap {
+    width: calc(41% - 20px);
+  }
+  .main-service-field .cont-wrap-finance .link-item { padding: 0 20px; }
+
+  /* 분야별 서비스 - 환경 */
+  .main-service-field .cont-wrap-env .link-item-wrap {
+    width: 250px;
+    flex-wrap: wrap;
+    gap: 15px 0;
+  }
+  .main-service-field .cont-wrap-env .link-item-wrap [class^=link-item] {
+    width: 100%;
+  }
+  .main-service-field .cont-wrap-env .l-wrap {
+    width: 100%;
+    height: calc(((100% / 3) * 2) - 7px);
+    gap: 0;
+    flex: 1 0 auto;
+    justify-content: space-between;
+  }
+  .main-service-field .cont-wrap-env .link-item {
+    height: calc(50% - 7px);
+  }
+  .main-service-field .cont-wrap-env .link-item-banner {
+    height: calc(100% / 3 - 7px);
+    padding: 10px;
+    background-image: none;
+  }
+
+  /* 분야별 서비스 - 기업 & 문화 & 복지 */
+  .main-service-field .cont-wrap-economy .list.grid,
+  .main-service-field .cont-wrap-culture .list.grid,
+  .main-service-field .cont-wrap-welfare .list.grid { overflow: hidden; }
+  .main-service-field .cont-wrap-economy .list.grid li,
+  .main-service-field .cont-wrap-culture .list.grid li,
+  .main-service-field .cont-wrap-welfare .list.grid li { width: calc(50% - 10px); }
+  .main-service-field .cont-wrap-economy .list.grid li:nth-last-child(2), 
+  .main-service-field .cont-wrap-culture .list.grid li:nth-last-child(2),
+  .main-service-field .cont-wrap-welfare .list.grid li:nth-last-child(2) { border-color: transparent;   }
+
+  .main-service-field .cont-wrap-economy .link-item-wrap { 
+    width: 210px;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 0;
+   }
+   .main-service-field .cont-wrap-economy .link-item { 
+    width: 100%;
+    height: calc(25% - 10px);
+    flex-direction: row;
+    gap: 0 10px;
+   }
+
+   /* 분야별 서비스 - 문화 */
+   .main-service-field .cont-wrap-culture .cont02 { width: 200px; }
+   .main-service-field .cont-wrap-culture .link-item-wrap { 
+    width: 200px;
+    flex-direction: column;
+    gap: 20px 0;
+   }
+   .main-service-field .cont-wrap-culture .link-item-wrap .link-item-banner {
+    padding-top: 20px;
+    background-position: center bottom -70px;
+   }
+
+   /* 분야별 서비스 - 행정 */
+   .main-service-field .cont-wrap-admin .link-item-wrap { width: 380px; }
+   .main-service-field .cont-wrap-admin .link-item { padding: 0 20px; }
+   .main-service-field .cont-wrap-admin .link-item.item01 { padding-left: 240px; }
+
+   /* 분야별 서비스 - 과학 */
+   .main-service-field .cont-wrap-science .link-item-banner { margin-left: 20px; }
+   
+  /* 대전시와 소통해요 */
+  .main-commu .inner { padding-left: 43px; }
+  .main-commu .commu-area .top-wrap { 
+    flex-wrap: wrap;
+    margin-bottom: 0;
+   }
+  .main-commu .commu-area .sc-title {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 1100px) {
+  /* 메인 슬라이드 */
+  .main-news-area .mayor-info .mayor-txt p { font-size: 18px; }
+  .main-news-area .mayor-info .mayor-txt strong { font-size: 27px; }
+  .main-news-area .mayor-img {
+    width: 180px;
+    height: 193px;
+  }
+}
+
+@media (max-width: 1024px) {
+  [class^=main-] .inner { padding: 0 20px; }
+
+  /* 메인 슬라이드 */
+  .main-news-area .inner { padding: 0; }
+  .main-news-area .mayor-news-area { padding: 0 20px; }
+  .main-news-area .mayor-info .mayor-txt { padding: 15px 0; }
+  .main-news-area .mayor-img {
+    right: auto;
+    left: 0;
+  }
+  .main-news-area .news-wrap { padding: 30px 20px; }
+
+  /* story 대전 */
+  .main-story-feed .inner { flex-wrap: wrap; }
+  .main-story-feed .story-area { width: 100%; margin-bottom: 50px; }
+  .main-story-feed .story-area .story-wrap { gap: 0 20px; }
+  .main-story-feed .story-wrap .story-item { width: calc(50% - 10px); }
+  .main-story-feed .broadcast-wrap, .main-story-feed .notification-wrap {
+    width: calc(50% - 10px);
+  }
+  .main-story-feed .broadcast-wrap .broadcast-item,
+  .main-story-feed .notification-wrap .slider-wrap { 
+    max-width: 325px;
+    margin: 0 auto;
+  }
+  .main-story-feed .broadcast-wrap .contents { padding: 20px 20px 13px; }
+  .main-story-feed .broadcast-wrap .contents strong { font-size: 16px; }
+  .main-story-feed .notification-wrap .swiper-slide { height: 270px; }
+
+  [class^=main-popup] .tit-wrap strong {
+    width: 120px;
+    font-size: 20px;
+    line-height: 55px;
+   }
+  [class^=main-popup] .contents-wrap { 
+    height: calc(100% - 40px);
+    padding: 20px 18px 40px;
+   }
+   [class^=main-popup] .contents-wrap strong { font-size: 18px; }
+   [class^=main-popup] .contents-wrap strong em { font-size: 24px; }
+   [class^=main-popup] .contents.grid-4 .link-item { width: calc(100% / 3 - 23px);}
+   [class^=main-popup] .contents-area .btn-close {
+    right: 15px;
+    top: 11px;
+   }
+
+   /* 분야별 서비스 */
+   .main-service-field .list-wrap [class^=tit-] {
+    font-size: 18px;
+   }
+   .main-service-field .field-tab-wrap { padding: 0 25px; }
+   .main-service-field .field-tab-wrap:before { display: none; }
+   .main-service-field .field-tab-list { overflow-x: scroll; }
+   .main-service-field .field-tab-list a { padding: 0 16px; }
+   .main-service-field .field-tab-wrap .control-wrap { display: none; }
+
+   .main-service-field [class^="cont-wrap"] { padding: 20px 15px; }
+
+    /* 분야별 서비스 - list-icon type */
+   .main-service-field .list.icon { 
+    flex-wrap: wrap;
+    justify-content: flex-start;
+   }
+   .main-service-field .list.icon li {
+    width: calc(100% / 3);
+    padding-top: 30px;
+   }
+   .main-service-field .list.icon li a {
+    display: flex;
+    align-items: center;
+    padding: 0;
+    text-align: left;
+   }
+   .main-service-field .list.icon .icon-wrap { 
+    width: 60px;
+    height: 60px;
+    margin: 0 15px 0 0;
+   }
+   .main-service-field .list.icon .icon-wrap img { width: 35px; }
+
+   /* 분야별 서비스 - 만남 */
+   .main-service-field .cont-wrap-family .cont01 { width: 150px; }
+
+   /* 분야별 서비스 - 교육 */
+   .main-service-field .cont-wrap-edu .link-item-wrap { 
+    width: 270px;
+    flex-direction: column;
+    gap: 0 5px;
+   }
+   .main-service-field .cont-wrap-edu .link-item-wrap .item01,
+   .main-service-field .cont-wrap-edu .link-item-wrap a:nth-child(4) {
+    width: calc(100% - 125px);
+    height: calc((100% / 3) - 10px);
+    order: -1;
+   }
+   .main-service-field .cont-wrap-edu .link-item-wrap a:nth-child(3),
+   .main-service-field .cont-wrap-edu .link-item-wrap a:nth-child(5) {
+    width: 120px;
+    height: calc(50% - 5px);
+   }
+
+   /* 분야별 서비스 - 복지 */
+   .main-service-field .cont-wrap-welfare .cont02 { width: 210px; }
+   .main-service-field .cont-wrap-welfare .link-item-wrap { 
+    width: 240px;
+    gap: 10px 0;
+   }
+   .main-service-field .cont-wrap-welfare .link-item { text-align: center; }
+   .main-service-field .cont-wrap-welfare .t-wrap {
+    gap: 0 10px;
+   }
+   .main-service-field .cont-wrap-welfare .t-wrap .link-item { 
+    width: calc(50% - 5px);
+    line-height: 19px;
+   }
+   .main-service-field .cont-wrap-welfare .b-wrap { gap: 10px; }
+   .main-service-field .cont-wrap-welfare .link-item-icon .icon-wrap {
+    width: 45px;
+    height: 45px;
+   }
+   .main-service-field .cont-wrap-welfare .link-item-icon .icon-wrap img {
+    width: 35px;
+    height: auto;
+   }
+   .main-service-field .cont-wrap-welfare .r-wrap { 
+    flex-direction: column;
+    gap: 10px;
+   }
+   .main-service-field .cont-wrap-welfare .r-wrap .link-item { 
+    width: auto;
+    height: 50px;
+    flex: 1;
+   }
+
+   /* 분야별 서비스 - 예산 */
+   .main-service-field .cont-wrap-finance .link-item-wrap {
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 0;
+   }
+   .main-service-field .cont-wrap-finance .link-item { 
+    width: 100%;
+    height: calc(25% - 5px);
+   }
+
+   /* 분야별 서비스 - 재난,교통 */
+   .main-service-field .cont-wrap-safety .list.icon li { width: calc(100% / 2);}
+   .main-service-field .cont-wrap-safety .link-item-wrap,
+   .main-service-field .cont-wrap-transport .link-item-wrap {
+    width: 280px;
+   }
+
+   /* 분야별 서비스 - 기업 */
+   .main-service-field .cont-wrap-economy .cont01 { width: 210px; }
+
+   /* 분야별 서비스 - 행정 */
+   .main-service-field .cont-wrap-admin .list.icon li { width: 50%;}
+   .main-service-field .cont-wrap-admin .list.icon .icon-wrap { margin: 0; }
+
+   /* 분야별 서비스 - 과학 */
+   .main-service-field .cont-wrap-science .link-item-wrap { width: 100%; }
+  .main-service-field .cont-wrap-science .l-wrap { 
+    flex-direction: column;
+    gap: 0;
+    justify-content: space-between;
+   }
+   .main-service-field .cont-wrap-science .link-item { 
+    width: 100%;
+    height: calc(25% - 5px);
+   }
+
+
+   /* 대전시와 소통해요 */
+   .main-commu .inner { 
+    flex-wrap: wrap;
+    padding: 0;
+   }
+   .main-commu .commu-area { 
+    width: 100%;
+    margin-right: 0; 
+    padding: 29px 20px 0;
+    flex: none;
+  }
+  .main-commu .commu-area .top-wrap { 
+    justify-content: center;
+    text-align: center;
+   }
+   .main-commu .commu-slider .control-wrap { display: none; }
+   .main-commu .monthly-area { 
+    position: relative;
+    width: 100%;
+    z-index: 0;
+   }
+   .main-commu .monthly-area:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 228px;
+    background: #f3f4f5;
+    z-index: -1;
+   }
+   .main-commu .monthly-area .menu-wrap a { padding: 10px 18px; }
+}
+
+@media (max-width: 920px) {
+  /* 분야별 서비스 */
+  .main-service-field .list.icon li {
+    width: calc(100% / 2);
+    padding-top: 15px;
+   }
+
+   /* 분야별 서비스 - 복지 */
+   .main-service-field .cont-wrap-welfare .cont02 { flex: 1; }
+
+   /* 분야별 서비스 - 재난 */
+   .main-service-field .cont-wrap-safety .list.icon a {
+    flex-direction: column;
+   }
+   .main-service-field .cont-wrap-safety .list.icon .icon-wrap {
+    margin: 0 0 15px 0;
+  }
+
+  /* 분야별 서비스 - 기업 & 문화 & 복지 */
+  .main-service-field .cont-wrap-economy .list.grid,
+  .main-service-field .cont-wrap-culture .list.grid,
+  .main-service-field .cont-wrap-welfare .list.grid { overflow-y: scroll; }
+  .main-service-field .cont-wrap-economy .list.grid li,
+  .main-service-field .cont-wrap-culture .list.grid li,
+  .main-service-field .cont-wrap-welfare .list.grid li { width: 100%; }
+  .main-service-field .cont-wrap-economy .list.grid li:nth-last-child(2),
+  .main-service-field .cont-wrap-culture .list.grid li:nth-last-child(2),
+  .main-service-field .cont-wrap-welfare .list.grid li:nth-last-child(2) { border-color: #c7c7c7; }
+
+  /* 분야별 서비스 - 문화 */
+  .main-service-field .cont-wrap-culture .cont02 { flex: 1; }
+
+  /* 분야별 서비스 - 행정 */
+  .main-service-field .cont-wrap-admin .list.icon li a { 
+    flex-direction: column;
+    gap: 15px 0px;
+   }
+}
+
+@media (max-width: 820px) {
+  /* 메인 슬라이드 */
+  .main-news-area .mayor-news-area { flex-wrap: wrap; }
+  .main-news-area .main-slider { 
+    width: 100%; 
+    margin-bottom: 30px;
+    border-radius: 15px;
+  }
+  .main-news-area .mayor-news-area .mayor-wrap {
+    height: auto;
+    margin-left: 0;
+    padding-top: 0;
+  }
+  .main-news-area .mayor-news-area .mayor-wrap:before { bottom: -35px; }
+  .main-news-area .mayor-news-area .mayor-wrap:after {
+    left: 57%;
+    right: auto;
+    top: 0;
+  }
+  .main-news-area .mayor-img { 
+    left: auto;
+    right: 0;
+    width: 219px;
+    height: 235px;
+  }
+  .main-news-area .news-tab-list .tab-cont { left: 10px; }
+
+  /* 분야별 서비스 */
+  .main-service-field .field-contents-area { height: auto; }
+  .main-service-field .list-wrap { padding: 15px; }
+  .main-service-field [class^="cont-wrap"] { flex-wrap: wrap; }
+  .main-service-field [class^="cont-wrap-"] .link-item-wrap { 
+    width: 100%;
+    padding-top: 15px;
+    gap: 15px 0;
+   }
+  .main-service-field .link-item-wrap .link-item strong { font-size: 16px; }
+  .main-service-field .link-item-wrap .link-item-banner {
+    padding: 20px 10px;
+    background-image: none;
+  }
+  .main-service-field .link-item-wrap .link-item-banner i { 
+    padding: 0 40px 0 0;
+   }
+  .main-service-field .link-item-wrap .link-item-banner i:after {
+    left: auto;
+    right: 0;
+    top: 50%;
+    bottom: auto;
+    transform: translate(0, -50%);
+  }
+
+  /* 분야별 서비스 - 만남 */
+  .main-service-field .cont-wrap-family .link-item-wrap { 
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 10px 0;
+    width: 100%;
+    padding-top: 15px;
+   }
+   .main-service-field .cont-wrap-family .link-item-wrap .link-item {
+    width: calc(50% - 5px);
+    height: 50px;
+   }
+   .main-service-field .item-news strong br { display: none; }
+
+   /* 분야별 서비스 - 교육 */
+   .main-service-field .cont-wrap-edu .left-wrap { 
+    width: 100%;
+    flex: 1 0 auto;
+   }
+   .main-service-field .cont-wrap-edu .link-item-wrap {
+    width: 100%;
+    flex-direction: row;
+    gap: 10px 5px;
+    padding-top: 15px;
+   }
+   .main-service-field .cont-wrap-edu .link-item-wrap .item01,
+   .main-service-field .cont-wrap-edu .link-item-wrap a:nth-child(4) { order: 0; }
+   .main-service-field .cont-wrap-edu .link-item-wrap .item01 { 
+    width: calc(50% - 5px);
+    height: 65px;
+  }
+   .main-service-field .cont-wrap-edu .link-item-wrap .link-item.item02 {
+    width: calc((100% / 3) - 5px);
+    height: auto;
+   }
+
+  /* 분야별 서비스 - 복지 */
+  .main-service-field .left-wrap { gap: 0 15px; }
+  .main-service-field .cont-wrap-welfare .cont01 .list.grid {
+    height: auto;
+    overflow: hidden;
+  }
+  .main-service-field .cont-wrap-welfare .t-wrap .link-item {
+    height: auto;
+  }
+  .main-service-field .cont-wrap-welfare .r-wrap {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+   /* 분야별 서비스 - 에산 */
+   .main-service-field .cont-wrap-finance .link-item-wrap {
+    padding: 0;
+    gap: 5px 0;
+   }
+
+   /* 분야별 서비스 - 도시 */
+   .main-service-field .list.icon li { width: calc(100% / 3); }
+
+   /* 분야별 서비스 - 재난 & 교통 */
+   .main-service-field .cont-wrap-safety .list.icon li { width: calc(100% / 4); }
+   .main-service-field .cont-wrap-safety .link-item-wrap,
+   .main-service-field .cont-wrap-transport .link-item-wrap {
+    flex-direction: row;
+    justify-content: space-between;
+   }
+   .main-service-field .cont-wrap-safety .link-item,
+   .main-service-field .cont-wrap-transport .link-item {
+    width: calc(50% - 10px);
+    height: 75px;
+   }
+
+   /* 분야별 서비스 - 환경 */
+   .main-service-field .cont-wrap-env .l-wrap { 
+    height: auto;
+    flex-direction: row;
+  }
+   .main-service-field .cont-wrap-env .l-wrap .link-item {
+    width: calc(50% - 7px);
+    height: 100%;
+    padding: 12px 20px;
+   }
+   .main-service-field .cont-wrap-env .link-item-banner {
+    height: auto;
+    padding: 20px 10px;
+   }
+
+   /* 분야별 서비스 - 기업 & 문화 */
+   .main-service-field .cont-wrap-economy .left-wrap { gap: 10px; }
+   .main-service-field .cont-wrap-economy .list-wrap { width: calc(50% - 5px); }
+   .main-service-field .cont-wrap-economy .list.grid,
+   .main-service-field .cont-wrap-culture .list.grid {
+     height: auto;
+     overflow: hidden;
+   }
+   .main-service-field .cont-wrap-economy .link-item-wrap {
+     flex-direction: row;
+     gap: 10px;
+   }
+   .main-service-field .cont-wrap-economy .link-item {
+     width: calc(50% - 5px);
+     height: 75px;
+   }
+
+   /* 분야별 서비스 - 관광 */
+   .main-service-field .cont-wrap-tour .link-item-wrap {
+     flex-direction: row;
+     gap: 10px;
+   }
+   .main-service-field .cont-wrap-tour .link-item {
+     width: 100%;
+     height: 75px;
+   }
+   .main-service-field .cont-wrap-tour .item01 { padding: 0; }
+
+   /* 분야별 서비스 - 행정 */
+   .main-service-field .cont-wrap-admin .list.icon li { width: 25%;}
+   .main-service-field .cont-wrap-admin .list.icon .icon-wrap { margin: 0; }
+   .main-service-field .cont-wrap-admin .link-item-wrap { gap: 15px; }
+   .main-service-field .cont-wrap-admin .item01 { height: 100px; }
+   .main-service-field .cont-wrap-admin .link-item-wrap .link-item { 
+    height: auto;
+   }
+   .main-service-field .cont-wrap-admin .b-wrap .link-item { padding: 12px 20px; }
+   .main-service-field .cont-wrap-admin .link-item.item01 { padding: 15px 20px 15px 130px;}
+
+   /* 분야별 서비스 - 과학 */
+   .main-service-field .cont-wrap-science .link-item-wrap { 
+    flex-direction: column;
+    padding: 0;
+    gap: 0;
+   }
+   .main-service-field .cont-wrap-science .l-wrap { gap: 15px;}
+   .main-service-field .cont-wrap-science .link-item { height: 65px; }
+   .main-service-field .cont-wrap-science .link-item-banner { 
+    width: 100%;
+    margin: 15px 0 0;
+   }
+}
+
+@media (max-width: 767px) {
+  /* 검색 */
+  .main-search-area .inner { padding: 0 20px; }
+  .main-search-area .search-wrap { width: 100%; }
+  .main-search-area .keyword-wrap { 
+    justify-content: flex-start;
+    gap: 0 20px;
+   }
+   .main-search-area .keyword-wrap .keyword-list { flex-wrap: wrap; }
+
+   /* 메인 슬라이드 */
+   .main-news-area .main-slider [class^=swiper-button] { display: none; }
+   .main-news-area .news-tab-list .tab-tit { font-size: 16px; }
+   .main-news-area .news-tab-list .swiper-slide { width: 200px; }
+   .main-news-area .tab-cont .link-item .tit { font-size: 17px; }
+
+   /* 대전시 주요 서비스 */
+   .main-service .inner { align-items: center; }
+   .main-service .sc-title { text-align: center; }
+   .main-service .service-list-wrap { margin-bottom: 45px; }
+   .main-service .service-list { 
+    flex-wrap: wrap;
+    max-height: 150px;
+   }
+   .main-service .service-list { justify-content: center; }
+   .main-service .service-list .list-item { margin: 0 10px 15px; }
+   .main-service .service-list .link-item .service-txt { font-size: 15px; }
+   .main-service .service-list .list-item.item-more {
+    right: auto;
+    top: auto;
+    left: 50%;
+    bottom: -50px;
+    transform: translateX(-50%);
+   }
+
+   /* story 대전 */
+   .main-story-feed .slider-control-wrap [class^=swiper-button] { display: none; }
+
+   [class^=main-popup] .contents .link-item,
+   [class^=main-popup] .contents.grid-4 .link-item { width: calc(100% / 2 - 23px);}
+
+   /* 분야별 서비스 */
+   .main-service-field .sc-title { text-align: center; }
+   .main-service-field .sc-title span {
+    display: block;
+    margin: 0;
+   }
+   .main-service-field .sc-title:before {
+    content: '';
+    position: absolute;
+    left: 30px;
+    bottom: -24px;
+    width: 80px;
+    height: 70px;
+    background: url(/asset/images/field_dream01.png) no-repeat 50% / 100%;
+   }
+   .main-service-field .sc-title:after {
+    width: 75px;
+    height: 70px;
+    background-image: url(/asset/images/field_dream02.png);
+   }
+
+   .main-service-field [class^="cont-wrap"] { padding: 15px; }
+   .main-service-field .link-item-wrap .link-item {
+    height: 75px;
+    padding: 10px;
+   }
+
+   /* 분야별 서비스 - 예산 */
+   .main-service-field .cont-wrap-finance .left-wrap { gap: 0 10px; }
+   .main-service-field .field-contents-area .cont-wrap-finance .link-item-wrap {
+    width: 100%;
+    padding-top: 10px;
+    flex-direction: row;
+    gap: 10px 0;
+   }
+   .main-service-field .cont-wrap-finance .link-item {
+    width: calc(50% - 5px);
+    height: auto;
+    padding: 12px 20px;
+   }
+
+   /* 배너 모음 */
+   .main-banner-area .inner { flex-wrap: wrap; }
+   .main-banner-area .banner-collection-link { 
+    width: 100%;
+    padding: 0;
+    margin-bottom: 25px;
+   }
+   .main-banner-area .banner-slider .slider-control-wrap {
+    position: absolute;
+    margin-right: 0;
+    right: 020px;
+    top: -10px;
+   }
+   .main-banner-area .slider-control-wrap [class^=swiper-button] { display: none; }
+   .main-banner-area .slider-control-wrap .button-pause {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 13px 0px rgba(0,0,0,.1);
+    background-position: right 14px center;
+   }
+
+} 
+
+@media (max-width: 680px) {
+  /* 분야별 서비스 */
+  .main-service-field .sc-title:before {
+    width: 57px;
+    height: 50px;
+  }
+  .main-service-field .sc-title:after {
+    width: 54px;
+    height: 50px;
+  }
+
+  .main-service-field .left-wrap {
+    flex-wrap: wrap;
+    gap: 10px 0;
+  }
+  .main-service-field [class^=cont-wrap-] .list-wrap {
+    width: 100%;
+    flex: 1 0 auto;
+  }
+  .main-service-field .list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .main-service-field .list-wrap .list.grid { 
+    height: auto;
+    padding: 0;
+    overflow: visible;
+   }
+  .main-service-field .list li,
+  .main-service-field .list.grid li {
+    width: calc(50% - 10px);
+  }
+  .main-service-field .list li:nth-last-child(2) { border-color: transparent; }
+
+  /* 분야별 서비스 - 예산 */
+  .main-service-field .cont-wrap-finance .left-wrap { gap: 10px 0; }
+  .main-service-field .cont-wrap-finance .list { flex-direction: column; }
+  .main-service-field .cont-wrap-finance .list li { width: 100%; }
+  .main-service-field .cont-wrap-finance .list li:nth-last-child(2) { border-color: #c7c7c7; }
+
+  /* 분야별 서비스 - 도시 */
+   .main-service-field .list.icon li { width: calc(100% / 2); }
+
+   /* 분야별 서비스 - 재난,교통 */
+   .main-service-field .cont-wrap-safety .list.icon li { width: calc(100% / 2); }
+   .main-service-field .cont-wrap-safety .link-item-wrap,
+   .main-service-field .cont-wrap-transport .link-item-wrap,
+   .main-service-field .cont-wrap-env .link-item-wrap,
+   .main-service-field .cont-wrap-env .l-wrap { flex-wrap: wrap; }
+   .main-service-field .cont-wrap-safety .link-item,
+   .main-service-field .cont-wrap-transport .link-item,
+   .main-service-field .cont-wrap-env .l-wrap .link-item { width: 100%; }
+
+   /* 분야별 서비스 - 환경 */
+   .main-service-field .cont-wrap-env .link-item-wrap,
+   .main-service-field .cont-wrap-env .l-wrap { gap: 10px 0; }
+   .main-service-field .cont-wrap-env .link-item-wrap .link-item { height: 75px; }
+
+   /* 분야별 서비스 - 기업 & 문화 */
+   .main-service-field .cont-wrap-economy .list li,
+   .main-service-field .cont-wrap-culture .list li { width: 100%; }
+   .main-service-field .cont-wrap-economy .list li:nth-last-child(2),
+   .main-service-field .cont-wrap-culture .list li:nth-last-child(2) { border-color: #c7c7c7; }
+
+   .main-service-field .cont-wrap-economy .link-item-wrap,
+   .main-service-field .cont-wrap-tour .link-item-wrap { flex-direction: column; }
+   .main-service-field .cont-wrap-economy .link-item,
+   .main-service-field .cont-wrap-tour .link-item { 
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 620px) {
+  /* 메인 슬라이드 */
+  .main-news-area .main-slider .swiper-slide { height: 75vw; }
+  .main-news-area .news-wrap .news-tab-list {
+    padding-right: 40px;
+    padding-bottom: 10px;
+  }
+  .main-news-area .tab-cont .slider-control-wrap { display: none; }
+}
+
+@media (max-width: 550px) {
+  .main-story-feed .story-area .story-wrap { 
+    flex-wrap: wrap;
+    gap: 20px 0;
+   }
+  .main-story-feed .story-wrap .story-item {
+    width: 100%;
+    padding-bottom: 15px;
+  }
+  .main-story-feed .story-item .story-tit { 
+    height: auto;
+    padding: 15px 15px 0;
+    font-size: 16px;
+   }
+   .main-story-feed .broadcast-wrap, .main-story-feed .notification-wrap {
+    width: 100%; 
+   }
+   .main-story-feed .broadcast-wrap { margin-bottom: 30px; }
+
+   /* 분야별 서비스 */
+   .main-service-field .list-wrap .list li a { font-size: 14px; }
+
+   /* 분야별 서비스 - 교옥 */
+   .main-service-field .cont-wrap-edu .link-item-wrap {
+    flex-direction: column;
+   }
+   .main-service-field .cont-wrap-edu .link-item-wrap .link-item.item01,
+   .main-service-field .cont-wrap-edu .link-item-wrap .link-item.item02 {
+    width: 100%;
+    height: auto;
+    padding: 12px 20px;
+   }
+   .main-service-field .cont-wrap-edu .logo_pc { display: none; }
+   .main-service-field .cont-wrap-edu .logo_mo { display: block; }
+}
+
+@media (max-width: 480px) {
+  [class^=main-popup] .contents { margin-left: 0; }
+  [class^=main-popup] .contents .link-item,
+  [class^=main-popup] .contents.grid-4 .link-item { 
+    width: 100%;
+    height: auto;
+    margin-left: 0;
+   }
+
+   /* 메인 슬라이드 */
+   .main-news-area .mayor-link a { width: 160px; }
+   .main-news-area .mayor-img {
+    width: 200px;
+    height: 214px;
+   }
+
+   /* 분야별 서비스 */
+   .main-service-field .sc-title:before,
+   .main-service-field .sc-title:after { display: none; }
+   .main-service-field .list-wrap .list,
+   .main-service-field .list-wrap .list.grid {
+    flex-direction: column;
+   }
+   .main-service-field .list-wrap .list li,
+   .main-service-field .list-wrap .list.grid li {
+    width: 100%;
+   }
+   .main-service-field .list-wrap .list li:nth-last-child(2),
+   .main-service-field .list-wrap .list.grid li:nth-last-child(2) {
+    border-color: #c7c7c7;
+   }
+
+   .main-service-field [class^="cont-wrap-"] .list.icon li { width: 100%; }
+
+   .main-service-field .link-item-wrap .link-item { text-align: center; }
+   .main-service-field .item-news strong { padding-left: 0; }
+   .main-service-field .item-news strong:before { display: none; }
+
+   /* 분야별 서비스 - 예산 */
+   .main-service-field .cont-wrap-finance .link-item-wrap {
+    flex-direction: column;
+   }
+   .main-service-field .cont-wrap-finance .link-item {
+    width: 100%;
+    text-align: left;
+   }
+
+   /* 분야별 서비스 - 재난 */
+   .main-service-field .cont-wrap-safety .list.icon a { flex-direction: row;}
+   .main-service-field .cont-wrap-safety .list.icon .icon-wrap { margin: 0 15px 0 0; }
+
+   /* 분야별 서비스 - 관광 */
+   .main-service-field .cont-wrap-tour .item02 { background-image: none; }
+
+   /* 분야별 서비스 - 행정 */
+   .main-service-field .cont-wrap-admin .list.icon li a { flex-direction: row; }
+   .main-service-field .cont-wrap-admin .list.icon .icon-wrap { margin-right: 15px;}
+   .main-service-field .cont-wrap-admin .link-item-wrap { gap: 10px 0; }
+   .main-service-field .cont-wrap-admin .b-wrap {
+    flex-direction: column;
+    gap: 10px 0;
+   }
+   .main-service-field .cont-wrap-admin .b-wrap .link-item {
+    width: 100%;
+  }
+   .main-service-field .cont-wrap-admin .link-item.item01 { 
+    padding-left: 110px;
+    background-size: auto 65px;
+    text-align: left;
+  }
+
+   /* 대전시와 소통해요 */
+   .main-commu .commu-area .sns-wrap { gap: 0 5px; }
+   .main-commu .commu-slider { height: 320px; }
+   .main-commu .monthly-area { padding-bottom: 45px; }
+   .main-commu .monthly-area .menu-wrap { 
+    flex-wrap: wrap;
+    width: 215px;
+    margin: 0 auto;
+    gap: 10px 0;
+   }
+   .main-commu .monthly-area .menu-wrap a { 
+    width: 100%;
+    text-align: center;
+   }
+}
+
+@media (max-width: 400px) {
+  /* 검색 */
+  .main-search-area .keyword-wrap { flex-wrap: wrap; }
+  .main-search-area .keyword-wrap .keyword-tit { width: 100%; }
+
+  /* 메인 슬라이드 */
+  .main-news-area .mayor-news-area .mayor-wrap { 
+    align-items: center;
+    padding: 0;
+   }
+   .main-news-area .mayor-news-area .mayor-wrap:before {
+    left: -25px;
+    bottom: 10px;
+   }
+   .main-news-area .mayor-news-area .mayor-wrap:after {
+    left: auto;
+    right: 20px;
+    top: 50px;
+   }
+   .main-news-area .mayor-info .mayor-txt { 
+    margin: 0;
+    text-align: center;
+   }
+   .main-news-area .mayor-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 0 auto 25px;
+   }
+   .main-news-area .mayor-link a { width: 150px; }
+   .main-news-area .mayor-link a + a { margin: 0; }
+  .main-news-area .mayor-img {
+    position: static;
+  }
+
+  /* 분야별 서비스 - 도시 */
+   .main-service-field .list.icon li { width: 100%; }
+
+   /* 분야별 서비스 - 과학 */
+   .main-service-field .cont-wrap-science .link-item-banner i { font-size: 16px; }
+}
