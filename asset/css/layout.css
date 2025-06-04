@@ -534,7 +534,7 @@ body {
 /* 모바일 gnb */
 #header .m-gnb-area {
   display: none;
-  position: absolute;
+  position: fixed;
   right: -100%;
   top: 0;
   width: 314px;
