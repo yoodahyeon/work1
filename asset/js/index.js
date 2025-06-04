@@ -135,7 +135,7 @@ $('.main-slider .button-popup-open').on('click', function () {
   $('html').css('overflow', 'hidden');
 })
 
-fetch('/asset/js/mainSlider.json')
+fetch('./asset/js/mainSlider.json')
   .then(response => response.json())
   .then(data => {
     const container = document.querySelector('.main-popup-slider .contents');
@@ -248,7 +248,7 @@ $(".main-service .item-more").on('click', function (e) {
 
 // 알림창
 // 슬라이드 불러오기
-fetch('/asset/js/notification.json')
+fetch('./asset/js/notification.json')
 .then(response => response.json())
 .then(data => {
   const container = document.querySelector('.notification-wrap .swiper-wrapper');
