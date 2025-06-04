@@ -141,7 +141,7 @@
   top: 0;
   width: 48px;
   height: 48px;
-  background: #de142a url(/asset/images/ico_srh.png) no-repeat 50% 50%;
+  background: #de142a url(../images/ico_srh.png) no-repeat 50% 50%;
   border-radius: 50%;
   text-indent: -9999px;
 }
@@ -167,7 +167,7 @@
   width: 11px;
   height: 11px;
   margin-top: -6px;
-  background: url(/asset/images/ico_fav.png) no-repeat;
+  background: url(../images/ico_fav.png) no-repeat;
 }
 .main-search-area .keyword-wrap .keyword-list {
   display: flex;
@@ -232,7 +232,7 @@
   bottom: -45px;
   width: 194px;
   height: 194px;
-  background: url(/asset/images/bg_mayor_b.png) no-repeat;
+  background: url(../images/bg_mayor_b.png) no-repeat;
   animation: rotate 20s linear infinite reverse;
   z-index: -1;
 }
@@ -243,7 +243,7 @@
   top: 0;
   width: 63px;
   height: 67px;
-  background: url(/asset/images/bg_mayor_s.png) no-repeat;
+  background: url(../images/bg_mayor_s.png) no-repeat;
   animation:  rotate 15s linear infinite;
   z-index: -1;
 }
@@ -297,7 +297,7 @@
   width: 9px;
   height: 9px;
   margin-top: -5px;
-  background: url(/asset/images/bul_arr_01.png) no-repeat;
+  background: url(../images/bul_arr_01.png) no-repeat;
   transition: all 0.2s;
 }
 .main-news-area .mayor-link a + a {
@@ -310,7 +310,7 @@
 }
 .main-news-area .mayor-link a:hover:after,
 .main-news-area .mayor-link a:focus:after {
-  background-image: url(/asset/images/bul_arr_07.png);
+  background-image: url(../images/bul_arr_07.png);
 }
 
 .main-news-area .mayor-img {
@@ -426,7 +426,7 @@
   width: 20px;
   height: 20px;
   margin-left: -10px;
-  background: url(/asset/images/ico_news_off.png) no-repeat;
+  background: url(../images/ico_news_off.png) no-repeat;
   transition: all 0.2s;
 }
 .main-news-area .tab-cont .link-item .tit:before {
@@ -441,7 +441,7 @@
 }
 .main-news-area .tab-cont .link-item:hover .tit:after,
 .main-news-area .tab-cont .link-item:focus .tit:after {
-  background-image: url(/asset/images/ico_news_on.png);
+  background-image: url(../images/ico_news_on.png);
   transform: rotate(90deg);
 }
 
@@ -450,7 +450,7 @@
   width: 16px;
   height: 16px;
   margin-left: 3px;
-  background: url(/asset/images/ico_new.png) no-repeat;
+  background: url(../images/ico_new.png) no-repeat;
   text-indent: -9999px;
   vertical-align: middle;
 }
@@ -469,7 +469,7 @@
   top: 4px;
   width: 16px;
   height: 16px;
-  background: url(/asset/images/ico_date.png) no-repeat;
+  background: url(../images/ico_date.png) no-repeat;
 }
 .main-news-area .tab-cont .slider-control-wrap {
   position: absolute;
@@ -541,123 +541,123 @@
 
 /* 주요서비스 아이콘 */
 .main-service .service-list .item-civil .link-item:before {
-  background-image: url(/asset/images/ico_service_01.png);
+  background-image: url(../images/ico_service_01.png);
 }
 .main-service .service-list .item-civil .link-item:hover:before,
 .main-service .service-list .item-civil .link-item:focus:before {
-  background-image: url(/asset/images/ico_service_01_w.png);
+  background-image: url(../images/ico_service_01_w.png);
 }
 .main-service .service-list .item-civil-comp .link-item:before {
-  background-image: url(/asset/images/ico_service_02.png);
+  background-image: url(../images/ico_service_02.png);
 }
 .main-service .service-list .item-civil-comp .link-item:hover:before,
 .main-service .service-list .item-civil-comp .link-item:focus:before {
-  background-image: url(/asset/images/ico_service_02_w.png);
+  background-image: url(../images/ico_service_02_w.png);
 }
 .main-service .service-list .item-call .link-item:before {
-  background-image: url(/asset/images/ico_service_18.png);
+  background-image: url(../images/ico_service_18.png);
 }
 .main-service .service-list .item-call .link-item:hover:before,
 .main-service .service-list .item-call .link-item:focus:before {
-  background-image: url(/asset/images/ico_service_18_w.png);
+  background-image: url(../images/ico_service_18_w.png);
 }
 .main-service .service-list .item-reserv .link-item:before {
-  background-image: url(/asset/images/ico_service_04.png);
+  background-image: url(../images/ico_service_04.png);
 }
 .main-service .service-list .item-reserv .link-item:hover:before,
 .main-service .service-list .item-reserv .link-item:focus:before {
-  background-image: url(/asset/images/ico_service_04_w.png);
+  background-image: url(../images/ico_service_04_w.png);
 }
 .main-service .service-list .item-animal .link-item:before {
-  background-image: url(/asset/images/ico_service_05.png);
+  background-image: url(../images/ico_service_05.png);
 }
 .main-service .service-list .item-animal .link-item:hover:before,
 .main-service .service-list .item-animal .link-item:focus:before {
-  background-image: url(/asset/images/ico_service_05_w.png);
+  background-image: url(../images/ico_service_05_w.png);
 }
 .main-service .service-list .item-businesse-info .link-item:before {
-  background-image: url(/asset/images/ico_service_07.png);
+  background-image: url(../images/ico_service_07.png);
 }
 .main-service .service-list .item-businesse-info .link-item:hover:before,
 .main-service .service-list .item-businesse-info .link-item:focus:before {
-  background-image: url(/asset/images/ico_service_07_w.png);
+  background-image: url(../images/ico_service_07_w.png);
 }
 .main-service .service-list .item-statistics .link-item:before {
-  background-image: url(/asset/images/ico_service_16.png);
+  background-image: url(../images/ico_service_16.png);
 }
 .main-service .service-list .item-statistics .link-item:hover:before,
 .main-service .service-list .item-statistics .link-item:focus:before {
-  background-image: url(/asset/images/ico_service_16_w.png);
+  background-image: url(../images/ico_service_16_w.png);
 }
 .main-service .service-list .item-tram .link-item:before {
-  background-image: url(/asset/images/ico_service_19.png);
+  background-image: url(../images/ico_service_19.png);
 }
 .main-service .service-list .item-tram .link-item:hover:before,
 .main-service .service-list .item-tram .link-item:focus:before {
-  background-image: url(/asset/images/ico_service_19_w.png);
+  background-image: url(../images/ico_service_19_w.png);
 }
 .main-service .service-list .item-city-housing .link-item:before {
-  background-image: url(/asset/images/ico_service_09.png);
+  background-image: url(../images/ico_service_09.png);
 }
 .main-service .service-list .item-city-housing .link-item:hover:before,
 .main-service .service-list .item-city-housing .link-item:focus:before {
-  background-image: url(/asset/images/ico_service_09_w.png);
+  background-image: url(../images/ico_service_09_w.png);
 }
 .main-service .service-list .item-health .link-item:before {
-  background-image: url(/asset/images/ico_service_10.png);
+  background-image: url(../images/ico_service_10.png);
 }
 .main-service .service-list .item-health .link-item:hover:before,
 .main-service .service-list .item-health .link-item:focus:before {
-  background-image: url(/asset/images/ico_service_10_w.png);
+  background-image: url(../images/ico_service_10_w.png);
 }
 .main-service .service-list .item-seesaw .link-item:before {
-  background-image: url(/asset/images/ico_service_11.png);
+  background-image: url(../images/ico_service_11.png);
 }
 .main-service .service-list .item-seesaw .link-item:hover:before,
 .main-service .service-list .item-seesaw .link-item:focus:before {
-  background-image: url(/asset/images/ico_service_11_w.png);
+  background-image: url(../images/ico_service_11_w.png);
 }
 .main-service .service-list .item-budget .link-item:before {
-  background-image: url(/asset/images/ico_service_12.png);
+  background-image: url(../images/ico_service_12.png);
 }
 .main-service .service-list .item-budget .link-item:hover:before,
 .main-service .service-list .item-budget .link-item:focus:before {
-  background-image: url(/asset/images/ico_service_12_w.png);
+  background-image: url(../images/ico_service_12_w.png);
 }
 .main-service .service-list .item-compliment .link-item:before {
-  background-image: url(/asset/images/ico_service_13.png);
+  background-image: url(../images/ico_service_13.png);
 }
 .main-service .service-list .item-compliment .link-item:hover:before,
 .main-service .service-list .item-compliment .link-item:focus:before {
-  background-image: url(/asset/images/ico_service_13_w.png);
+  background-image: url(../images/ico_service_13_w.png);
 }
 .main-service .service-list .item-audit .link-item:before {
-  background-image: url(/asset/images/ico_service_14.png);
+  background-image: url(../images/ico_service_14.png);
 }
 .main-service .service-list .item-audit .link-item:hover:before,
 .main-service .service-list .item-audit .link-item:focus:before {
-  background-image: url(/asset/images/ico_service_14_w.png);
+  background-image: url(../images/ico_service_14_w.png);
 }
 .main-service .service-list .item-survey .link-item:before {
-  background-image: url(/asset/images/ico_service_15.png);
+  background-image: url(../images/ico_service_15.png);
 }
 .main-service .service-list .item-survey .link-item:hover:before,
 .main-service .service-list .item-survey .link-item:focus:before {
-  background-image: url(/asset/images/ico_service_15_w.png);
+  background-image: url(../images/ico_service_15_w.png);
 }
 .main-service .service-list .item-youth-portal .link-item:before {
-  background-image: url(/asset/images/ico_service_06.png);
+  background-image: url(../images/ico_service_06.png);
 }
 .main-service .service-list .item-youth-portal .link-item:hover:before,
 .main-service .service-list .item-youth-portal .link-item:focus:before {
-  background-image: url(/asset/images/ico_service_06_w.png);
+  background-image: url(../images/ico_service_06_w.png);
 }
 .main-service .service-list .item-cleaning .link-item:before {
-  background-image: url(/asset/images/ico_service_17.png);
+  background-image: url(../images/ico_service_17.png);
 }
 .main-service .service-list .item-cleaning .link-item:hover:before,
 .main-service .service-list .item-cleaning .link-item:focus:before {
-  background-image: url(/asset/images/ico_service_17_w.png);
+  background-image: url(../images/ico_service_17_w.png);
 }
 
 .main-service .service-list .item-more {
@@ -667,11 +667,11 @@
 }
 .main-service .service-list .item-more .link-item:before {
   background-color: #31343d;
-  background-image: url(/asset/images/bul_more_w.png);
+  background-image: url(../images/bul_more_w.png);
 }
 .main-service .service-list .item-more.on .link-item:before {
   background-color: #31343d;
-  background-image: url(/asset/images/bul_close_w.png);
+  background-image: url(../images/bul_close_w.png);
 }
 .main-service .service-list .link-item .service-txt {
   color: #444;
@@ -811,7 +811,7 @@
   margin-top: -11px;
   width: 22px;
   height: 22px;
-  background: #f13163 url(/asset/images/djtv_ic.png) no-repeat 9px 50%;
+  background: #f13163 url(../images/djtv_ic.png) no-repeat 9px 50%;
   border-radius: 50%;
 }
 .main-story-feed .broadcast-wrap .contents strong {
@@ -912,7 +912,7 @@
   bottom: -24px;
   width: 219px;
   height: 96px;
-  background: url(/asset/images/field_dream.png) no-repeat 50% / 100%;
+  background: url(../images/field_dream.png) no-repeat 50% / 100%;
 }
 
 .main-service-field .field-tab-wrap {
@@ -985,7 +985,7 @@
   position: relative;
   width: 9px;
   height: 12px;
-  background: url(/asset/images/bul_nav_01.png) no-repeat;
+  background: url(../images/bul_nav_01.png) no-repeat;
   text-indent: -9999px;
 }
 .main-service-field .field-tab-wrap .control-wrap .btn-next {
@@ -1085,21 +1085,21 @@
   transform: translateY(-50%);
   width: 10px;
   height: 9px;
-  background: url(/asset/images/bul_arr_03.png);
+  background: url(../images/bul_arr_03.png);
 }
 .main-service-field .list-wrap .list li .new-tab:after {
   height: 10px;
-  background: url(/asset/images/bur_outlink_02.png);
+  background: url(../images/bur_outlink_02.png);
 }
 .main-service-field .list-wrap .list li a:hover {
   color: #b83e52;
   font-weight: 500;
 }
 .main-service-field .list-wrap .list li a:hover:after {
-  background-image: url(/asset/images/bul_arr_11.png);
+  background-image: url(../images/bul_arr_11.png);
 }
 .main-service-field .list-wrap .list li .new-tab:hover:after {
-  background: url(/asset/images/bur_outlink_01.png);
+  background: url(../images/bur_outlink_01.png);
 }
 
 /* 리스트 좌우정렬 */
@@ -1252,7 +1252,7 @@
   transform: translateY(-50%);
   width: 38px;
   height: 38px;
-  background: url(/asset/images/icon_1101.png) no-repeat;
+  background: url(../images/icon_1101.png) no-repeat;
 }
 
 /* 분야별 서비스 - 교육 */
@@ -1317,7 +1317,7 @@
   transform: translateY(-50%);
   width: 47px;
   height: 46px;
-  background: url(/asset/images/icon_0603.png) no-repeat 50%;
+  background: url(../images/icon_0603.png) no-repeat 50%;
 }
 .main-service-field .cont-wrap-welfare .item01 strong:after {
   content: '';
@@ -1327,7 +1327,7 @@
   transform: translateY(-50%);
   width: 32px;
   height: 32px;
-  background: url(/asset/images/bul_arr_07.png) no-repeat 50%;
+  background: url(../images/bul_arr_07.png) no-repeat 50%;
   background-color: #f7ebed;
   border-radius: 50%;
 }
@@ -1437,7 +1437,7 @@
 }
 .main-service-field .item-finance strong:after {
   background-color: #e3dffc;
-  background-image: url(/asset/images/bul_arr_05.png);
+  background-image: url(../images/bul_arr_05.png);
 }
 .main-service-field .cont-wrap-finance .item-tax {
   background-color: #f2eaf4;
@@ -1447,7 +1447,7 @@
 }
 .main-service-field .item-tax strong:after {
   background-color: #ebdbed;
-  background-image: url(/asset/images/bul_arr_06.png);
+  background-image: url(../images/bul_arr_06.png);
 }
 .main-service-field .cont-wrap-finance .item-budget {
   background-color: #ffe9eb;
@@ -1455,14 +1455,14 @@
 }
 .main-service-field .item-budget strong:after {
   background-color: #f7d9db;
-  background-image: url(/asset/images/bul_arr_07.png);
+  background-image: url(../images/bul_arr_07.png);
 }
 .main-service-field .cont-wrap-finance .item-contract {
   background-color: #f0f4f5;
 }
 .main-service-field .item-contract strong:after {
   background-color: #dae7ea;
-  background-image: url(/asset/images/bul_arr_10.png);
+  background-image: url(../images/bul_arr_10.png);
 }
 
 /* 분야별 서비스 - 도시 */
@@ -1475,11 +1475,11 @@
 .main-service-field .cont-wrap-city .link-item-banner {
   width: 100%;
   background-color: #f1faf5;
-  background-image: url(/asset/images/banner_01.png);
+  background-image: url(../images/banner_01.png);
 }
 .main-service-field .cont-wrap-city .link-item-banner i:after {
   background-color: #e3eeea;
-  background-image: url(/asset/images/bul_arr_10.png);
+  background-image: url(../images/bul_arr_10.png);
 }
 
 /* 분야별 서비스 - 재난 */
@@ -1519,13 +1519,13 @@
 .main-service-field .cont-wrap-env .link-item-banner {
   flex: 1;
   background-color: #e5e8f7;
-  background-image: url(/asset/images/banner_05.png);
+  background-image: url(../images/banner_05.png);
   border-color: #c7bdef;
   background-position: 100% 100%;
 }
 .main-service-field .cont-wrap-env .link-item-banner i:after {
   background-color: #d4d6eb;
-  background-image: url(/asset/images/bul_arr_09.png);
+  background-image: url(../images/bul_arr_09.png);
 }
 
 /* 분야별 서비스 - 기업 */
@@ -1570,21 +1570,21 @@
 }
 .main-service-field .cont-wrap-culture .item01 {
   background-color: #e5e9f7;
-  background-image: url(/asset/images/banner_0801.png);
+  background-image: url(../images/banner_0801.png);
   border-color: #c7bdef;
 }
 .main-service-field .cont-wrap-culture .item02 {
   background-color: #ffeaea;
-  background-image: url(/asset/images/banner_0802.png);
+  background-image: url(../images/banner_0802.png);
   border-color: #f1bcc5;
 }
 .main-service-field .cont-wrap-culture .item01 i:after {
   background-color: #d4d6ec;
-  background-image: url(/asset/images/bul_arr_06.png);
+  background-image: url(../images/bul_arr_06.png);
 }
 .main-service-field .cont-wrap-culture .item02 i:after {
   background-color: #f8d8db;
-  background-image: url(/asset/images/bul_arr_07.png);
+  background-image: url(../images/bul_arr_07.png);
 }
 
 /* 분야별 서비스 - 관광 */
@@ -1598,13 +1598,13 @@
 }
 .main-service-field .cont-wrap-tour .item01 {
   padding: 0 10px 0 90px;
-  background: url(/asset/images/dajeontour_img.png) no-repeat 0 50% / cover;
+  background: url(../images/dajeontour_img.png) no-repeat 0 50% / cover;
   border-color: #a3b7ed;
 }
 .main-service-field .cont-wrap-tour .item02 {
   padding: 0 45px;
   justify-content: flex-end;
-  background: #fff url(/asset/images/icon_0908.png) no-repeat 35px 100%;
+  background: #fff url(../images/icon_0908.png) no-repeat 35px 100%;
 }
 .main-service-field .cont-wrap-tour .item02 span {
   color: #6c2f74;
@@ -1644,12 +1644,12 @@
 .main-service-field .cont-wrap-admin .item01 {
   width: 100%;
   padding-left: 240px;
-  background: #fff url(/asset/images/mayor_greeting_img.png) no-repeat;
+  background: #fff url(../images/mayor_greeting_img.png) no-repeat;
   background-size: auto 100%;
 }
 .main-service-field .cont-wrap-admin .item01 strong:after {
   background-color: #f7ebed;
-  background-image: url(/asset/images/bul_arr_07.png);
+  background-image: url(../images/bul_arr_07.png);
 }
 .main-service-field .cont-wrap-admin .b-wrap {
   display: flex;
@@ -1664,14 +1664,14 @@
 }
 .main-service-field .cont-wrap-admin .item02 strong:after {
   background-color: #f0f4f5;
-  background-image: url(/asset/images/bul_arr_10.png);
+  background-image: url(../images/bul_arr_10.png);
 }
 .main-service-field .cont-wrap-admin .item03 strong {
   color: #a32576;
 }
 .main-service-field .cont-wrap-admin .item03 strong:after {
   background-color: #f0eaf1;
-  background-image: url(/asset/images/bul_arr_06.png);
+  background-image: url(../images/bul_arr_06.png);
 }
 
 /* 분야별 서비스 - 과학 */
@@ -1690,7 +1690,7 @@
   margin-left: 32px;
   padding-top: 30px;
   background-color: #ffe9eb;
-  background-image: url(/asset/images/banner_11.png);
+  background-image: url(../images/banner_11.png);
   background-position-x: 50%;
   border-color: #f1bcc4;
 }
@@ -1701,66 +1701,66 @@
 }
 .main-service-field .cont-wrap-science .link-item-banner i:after {
   background-color: #f7d9db;
-  background-image: url(/asset/images/bul_arr_07.png);
+  background-image: url(../images/bul_arr_07.png);
 }
 
 /* 분야별 서비스 리스트 타이틀 */
 .main-service-field .tit-wedding:before {
-  background-image: url(/asset/images/tit_17.png);
+  background-image: url(../images/tit_17.png);
 }
 .main-service-field .tit-care:before {
-  background-image: url(/asset/images/tit_18.png);
+  background-image: url(../images/tit_18.png);
 }
 .main-service-field .tit-dwelling:before {
-  background-image: url(/asset/images/tit_19.png);
+  background-image: url(../images/tit_19.png);
 }
 .main-service-field .tit-edu:before {
-  background-image: url(/asset/images/tit_10.png);
+  background-image: url(../images/tit_10.png);
 }
 .main-service-field .tit-youth:before {
-  background-image: url(/asset/images/tit_11.png);
+  background-image: url(../images/tit_11.png);
 }
 .main-service-field .tit-welfare:before {
-  background-image: url(/asset/images/tit_06.png);
+  background-image: url(../images/tit_06.png);
 }
 .main-service-field .tit-health:before {
-  background-image: url(/asset/images/tit_07.png);
+  background-image: url(../images/tit_07.png);
 }
 .main-service-field .tit-finance:before {
-  background-image: url(/asset/images/tit_01.png);
+  background-image: url(../images/tit_01.png);
 }
 .main-service-field .tit-tax:before {
-  background-image: url(/asset/images/tit_02.png);
+  background-image: url(../images/tit_02.png);
 }
 .main-service-field .tit-city:before {
-  background-image: url(/asset/images/tit_16.png);
+  background-image: url(../images/tit_16.png);
 }
 .main-service-field .tit-safety:before {
-  background-image: url(/asset/images/tit_03.png);
+  background-image: url(../images/tit_03.png);
 }
 .main-service-field .tit-transport:before {
-  background-image: url(/asset/images/tit_04.png);
+  background-image: url(../images/tit_04.png);
 }
 .main-service-field .tit-env:before {
-  background-image: url(/asset/images/tit_05.png);
+  background-image: url(../images/tit_05.png);
 }
 .main-service-field .tit-enterprise:before {
-  background-image: url(/asset/images/tit_08.png);
+  background-image: url(../images/tit_08.png);
 }
 .main-service-field .tit-economy:before {
-  background-image: url(/asset/images/tit_09.png);
+  background-image: url(../images/tit_09.png);
 }
 .main-service-field .tit-culture:before {
-  background-image: url(/asset/images/tit_12.png);
+  background-image: url(../images/tit_12.png);
 }
 .main-service-field .tit-gym:before {
-  background-image: url(/asset/images/tit_13.png);
+  background-image: url(../images/tit_13.png);
 }
 .main-service-field .tit-tour:before {
-  background-image: url(/asset/images/tit_14.png);
+  background-image: url(../images/tit_14.png);
 }
 .main-service-field .tit-admin:before {
-  background-image: url(/asset/images/tit_15.png);
+  background-image: url(../images/tit_15.png);
 }
 
 
@@ -1822,7 +1822,7 @@
 /* 대전시 소통 */
 .main-commu {
   background-color: #f3f4f5;
-  background-image: url(/asset/images/bg.png);
+  background-image: url(../images/bg.png);
   background-repeat: no-repeat;
   background-position: left bottom;
   border-bottom: 1px solid #eaeaee;
@@ -1933,23 +1933,23 @@
 }
 .main-commu .commu-slider .bottom-wrap .sns-youtube {
   background-color: #dd2e37;
-  background-image: url(/asset/images/ico_youtube.png);
+  background-image: url(../images/ico_youtube.png);
 }
 .main-commu .commu-slider .bottom-wrap .sns-band {
   background-color: #68be5e;
-  background-image: url(/asset/images/ico_band.png);
+  background-image: url(../images/ico_band.png);
 }
 .main-commu .commu-slider .bottom-wrap .sns-facebook {
   background-color: #2570c6;
-  background-image: url(/asset/images/ico_facebook.png);
+  background-image: url(../images/ico_facebook.png);
 }
 .main-commu .commu-slider .bottom-wrap .sns-blog {
   background-color: #38b341;
-  background-image: url(/asset/images/ico_blog.png);
+  background-image: url(../images/ico_blog.png);
 }
 .main-commu .commu-slider .bottom-wrap .sns-twitter {
   background-color: #000;
-  background-image: url(/asset/images/ico_twitter.png);
+  background-image: url(../images/ico_twitter.png);
 }
 
 .main-commu .commu-slider .control-wrap [class^="swiper-button"] {
@@ -1963,11 +1963,11 @@
 }
 .main-commu .commu-slider .control-wrap .swiper-button-prev {
   left: -10px;
-  background-image: url(/asset/images/bul_prev.png);
+  background-image: url(../images/bul_prev.png);
 }
 .main-commu .commu-slider .control-wrap .swiper-button-next {
   right: -25px;
-  background-image: url(/asset/images/bul_next.png);
+  background-image: url(../images/bul_next.png);
 }
 .main-commu .commu-slider .control-wrap [class^="swiper-button"]:after {
   display: none;
@@ -2082,7 +2082,7 @@
   height: 46px;
   margin: 0 auto 12px;
   background-color: #df142a;
-  background-image: url(/asset/images/ico_srh.png);
+  background-image: url(../images/ico_srh.png);
   background-repeat: no-repeat;
   background-position: center;
   border-radius: 50%;
@@ -2387,7 +2387,7 @@
     top: calc(50% - 3px);
     width: 13px;
     height: 6px;
-    background: url(/asset/images/bul_arr_04.png);
+    background: url(../images/bul_arr_04.png);
   }
   .main-service .service-list.on .list-item.item-more p:before {
     transform: rotate(-180deg);
@@ -3035,12 +3035,12 @@
     bottom: -24px;
     width: 80px;
     height: 70px;
-    background: url(/asset/images/field_dream01.png) no-repeat 50% / 100%;
+    background: url(../images/field_dream01.png) no-repeat 50% / 100%;
    }
    .main-service-field .sc-title:after {
     width: 75px;
     height: 70px;
-    background-image: url(/asset/images/field_dream02.png);
+    background-image: url(../images/field_dream02.png);
    }
 
    .main-service-field [class^="cont-wrap"] { padding: 15px; }

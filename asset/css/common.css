@@ -97,7 +97,7 @@
   width: 11px;
   height: 13px;
   margin-top: 0;
-  background: url(/asset/images/bul_nav_02.png) no-repeat;
+  background: url(../images/bul_nav_02.png) no-repeat;
 }
 .slider-control-wrap .swiper-button-next {
   background-position: -31px 0;
@@ -125,13 +125,13 @@
   display: block;
   width: 11px;
   height: 13px;
-  background: url(/asset/images/bul_nav_02.png) no-repeat -69px 0;
+  background: url(../images/bul_nav_02.png) no-repeat -69px 0;
   text-indent: -9999px;
   transition: all 0.2s;
   cursor: pointer;
 }
 .slider-control-wrap .button-pause.play {
-  background-image: url(/asset/images/bul_play.png);
+  background-image: url(../images/bul_play.png);
   background-position: 0 0;
 }
 
@@ -140,7 +140,7 @@
   width: 11px;
   height: 12px;
   margin-left: 20px;
-  background: url(/asset/images/bul_menu.png);
+  background: url(../images/bul_menu.png);
   background-position: center;
   text-indent: -9999px;
 }

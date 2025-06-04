@@ -54,7 +54,7 @@ body {
   content: '';
   width: 25px;
   height: 18px;
-  background: url(/asset/images/kor_nation.png) no-repeat 50%;
+  background: url(../images/kor_nation.png) no-repeat 50%;
 }
 
 #header .header-top-area {
@@ -248,38 +248,38 @@ body {
   padding-left: calc((100vw - 1400px) / 2);
   border-radius: 0 50px 0 50px;
   background-color: #f6f1f1;
-  background-image: url(/asset/images/tit_bg_01.png);
+  background-image: url(../images/tit_bg_01.png);
   background-repeat: no-repeat;
   background-position: right bottom;
   z-index: 1;
 }
 #header .list-02 .depth-content .tit-wrap {
   background-color: #f9f2f3;
-  background-image: url(/asset/images/tit_bg_02.png);
+  background-image: url(../images/tit_bg_02.png);
 }
 #header .list-03 .depth-content .tit-wrap {
   background-color: #ebf2f9;
-  background-image: url(/asset/images/tit_bg_03.png);
+  background-image: url(../images/tit_bg_03.png);
 }
 #header .list-04 .depth-content .tit-wrap {
   background-color: #ebf2f9;
-  background-image: url(/asset/images/tit_bg_04.png);
+  background-image: url(../images/tit_bg_04.png);
 }
 #header .list-05 .depth-content .tit-wrap {
   background-color: #f1f7f8;
-  background-image: url(/asset/images/tit_bg_05.png);
+  background-image: url(../images/tit_bg_05.png);
 }
 #header .list-06 .depth-content .tit-wrap {
   background-color: #f7f3ed;
-  background-image: url(/asset/images/tit_bg_06.png);
+  background-image: url(../images/tit_bg_06.png);
 }
 #header .list-07 .depth-content .tit-wrap {
   background-color: #f3f0f8;
-  background-image: url(/asset/images/tit_bg_07.png);
+  background-image: url(../images/tit_bg_07.png);
 }
 #header .list-08 .depth-content .tit-wrap {
   background-color: #fdeeef;
-  background-image: url(/asset/images/tit_bg_08.png);
+  background-image: url(../images/tit_bg_08.png);
 }
 
 #header .depth-content .tit-wrap .tit {
@@ -426,7 +426,7 @@ body {
 }
 #header .list-08 .depth02-item > a {
   padding: 14px 0 14px 25px;
-  background-image: url(/asset/images/bul_off.png);
+  background-image: url(../images/bul_off.png);
   background-repeat: no-repeat;
   background-position: right 17px center;
   transition: all 0.1s;
@@ -437,7 +437,7 @@ body {
 }
 #header .list-08 .depth02-item.on > a {
   background-color: #fff;
-  background-image: url(/asset/images/bul_on.png);
+  background-image: url(../images/bul_on.png);
   color: #df2438;
 }
 #header .gnb .depth03-type02 {
@@ -450,7 +450,7 @@ body {
   width: calc(100% - 230px);
   height: 100%;
   padding: 30px 40px;
-  background: url(/asset/images/menu_bg.png) no-repeat right bottom;
+  background: url(../images/menu_bg.png) no-repeat right bottom;
 }
 #header .depth02-item.on .depth03-type02 {
   display: flex;
@@ -490,7 +490,7 @@ body {
   transform: translateY(-50%);
   width: 25px;
   height: 25px;
-  background: rgba(184,62,82,.1) url(/asset/images/bul_arr_07.png) no-repeat center;
+  background: rgba(184,62,82,.1) url(../images/bul_arr_07.png) no-repeat center;
   border-radius: 50%;
 }
 #header .depth03-link-item > a + a {
@@ -516,7 +516,7 @@ body {
   width: 10px;
   height: 10px;
   margin-left: 5px;
-  background: url(/asset/images/depth_ic_link.png) no-repeat center;
+  background: url(../images/depth_ic_link.png) no-repeat center;
 }
 
 #header .header-main-area .m-gnb-open {
@@ -524,7 +524,7 @@ body {
   width: 70px;
   height: 100%;
   background-color: #d21529;
-  background-image: url(/asset/images/ico_menu.png);
+  background-image: url(../images/ico_menu.png);
   background-repeat: no-repeat;
   background-position: center;
   border-radius: 0 0 0 20px;
@@ -610,7 +610,7 @@ body {
   top: calc(50% - 2px);
   width: 9px;
   height: 5px;
-  background: url(/asset/images/bul_sel.png) no-repeat 50%;
+  background: url(../images/bul_sel.png) no-repeat 50%;
 }
 #header .m-util .select-list {
   display: none;
@@ -737,7 +737,7 @@ body {
   height: 10px;
   margin-left: 6px;
   margin-top: -1px;
-  background: url(/asset/images/depth_ic_link.png);
+  background: url(../images/depth_ic_link.png);
 }
 
 /* 모바일 분야별 정보 */
@@ -789,7 +789,7 @@ body {
   top: 20px;
   width: 13px;
   height: 14px;
-  background: url(/asset/images/bul_close.png);
+  background: url(../images/bul_close.png);
   text-indent: -9999px;
 }
 
@@ -889,7 +889,7 @@ body {
   transform: translateY(-50%) rotate(180deg);
   width: 9px;
   height: 5px;
-  background: url(/asset/images/bul_sel.png);
+  background: url(../images/bul_sel.png);
 }
 #footer .related-site .toggle-item.on .btn-toggle:after {
   transform: translateY(-50%) rotate(0);
