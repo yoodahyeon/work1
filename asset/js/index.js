@@ -108,26 +108,49 @@ $('#header .list-08 .depth02-item > a').on('mouseenter focus', function () {
   $(this).parent().addClass('on').siblings().removeClass('on');
 })
 
-// 메인 비주얼 슬라이드
-const mainSlider = new Swiper('.main-slider .swiper', {
-  loop: true,
-  autoplay: {
-    delay: 5000,
-    disableOnInteraction: false,
-  },
-  simulateTouch: false, // 마우스 드래그 막기
-  pagination: {
-    el: '.main-slider .swiper-pagination',
-    type: "fraction",
-  },
-  navigation: {
-    nextEl: '.main-slider .swiper-button-next',
-    prevEl: '.main-slider .swiper-button-prev',
-  },
-});
+// 메인 슬라이드 불러오기
+fetch('./asset/js/mainSlider.json')
+  .then(response => response.json())
+  .then(data => {
+    const container = document.querySelector('.main-slider .swiper-wrapper');
+    data.forEach(slide => {
+      const slideEl = document.createElement('div');
+      slideEl.className = `swiper-slide`;
+      slideEl.innerHTML = `
+      <a href="${slide.link}" class="${slide.class}" target="${slide.target}" title="${slide.title}">
+        <img src="${slide.image}" alt="${slide.alt}">
+      </a>
+    `;
+      container.appendChild(slideEl);
+    });
+  })
+  .catch(error => console.error('JSON 불러오기 실패:', error));
 
-// slide stop/play
-setupSliderControls('.main-slider .swiper', mainSlider);
+// 메인 비주얼 슬라이드
+setTimeout(() => {
+  const mainSlider = new Swiper('.main-slider .swiper', {
+    loop: true,
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false,
+    },
+    simulateTouch: false, // 마우스 드래그 막기
+    pagination: {
+      el: '.main-slider .swiper-pagination',
+      type: "fraction",
+    },
+    navigation: {
+      nextEl: '.main-slider .swiper-button-next',
+      prevEl: '.main-slider .swiper-button-prev',
+    },
+    observer: true,
+    observeParents: true,
+  });
+  
+  // slide stop/play
+  setupSliderControls('.main-slider .swiper', mainSlider);
+}, 100)
+
 
 // 핍업 열기
 $('.main-slider .button-popup-open').on('click', function () {
@@ -266,7 +289,7 @@ fetch('./asset/js/notification.json')
 .catch(error => console.error('JSON 불러오기 실패:', error));
 
 // 팝업 아이템 불러오기
-fetch('/asset/js/notification.json')
+fetch('./asset/js/notification.json')
   .then(response => response.json())
   .then(data => {
     const container = document.querySelector('.main-popup-notification .contents');
